@@ -1,0 +1,321 @@
+id,Model,Version release date,Hugging Face developer id,Link,Notes,benchmarks/runs,Display name
+QwQ-32B,QwQ-32B,2025-03-05,Qwen,https://huggingface.co/Qwen/QwQ-32B,,,
+ada,GPT-3 Medium,,,https://platform.openai.com/docs/deprecations#base-gpt-models,was deprecated 2024-01-04,,
+babbage,GPT-3 XL,,,https://platform.openai.com/docs/deprecations#base-gpt-models,was deprecated 2024-01-04,,
+babbage-002,GPT-3 XL,2024-01-04,,https://platform.openai.com/docs/models#gpt-base,,,
+claude-2.0,Claude 2,2023-07-11,,,Legacy model,"mTa4f52zsEuxdrPy7WfQvX,Gs4vxvDD5wmrSvyTkqx2YV,7LLTmqs4LC5GLVfJEqJWSC",
+claude-2.1,Claude 2.1,2023-11-21,,,Legacy model,"eMAisrJd7fAUHPfcPWXeXo,2vg9qw9pd8zSyRMu9YNiVm",
+claude-3-5-haiku-20241022,Claude 3.5 Haiku,2024-10-22,,,,"cqhrR5KnwpcuAVpHkZGQFd,Qe4yHtQm26TQHFCAjhKBaA,JQcqpW9xPfJRKJkHne6DpK,JpLxrpvthx7A75sbaHZ9Et,GSvi9Zf5aK3t5TfCPqNRHy",Claude 3.5 Haiku (Oct 2024)
+claude-3-5-sonnet-20240620,Claude 3.5 Sonnet,2024-06-20,,,,"78Wpvp8WDByAcQRBas72cs,H42HJG29bwqzaMewTMsmky,2xNPhKLsiWLHQBLLDGU4VJ,i5xfb9Bk8TaiuQ6WccCAzu,h7f9jZVWzZNDHNxP5eewNH",Claude 3.5 Sonnet (Jun 2024)
+claude-3-5-sonnet-20241022,Claude 3.5 Sonnet,2024-10-22,,,,"JCCVcVLz3J4TQXSU67hMJZ,AjroyuZECXLtMTwnzaMHtX,geVVaRWxuprKUqnW2VzvCa,ADAsCz7ZtJ8E4inNusQebu,MVnDrt94wyokzx3a7ZJkph,GUbGX7GABSbhxMXiYC5NFr",Claude 3.5 Sonnet (Oct 2024)
+claude-3-haiku-20240307,Claude 3 Haiku,2024-03-07,,,,"T3FWdCCWBryVjxwTcoY5bK,QSnWVKUVj9six4jYj4HJD9,ThMd6DNDTtyWxhPcb9Kq4y",
+claude-3-opus-20240229,Claude 3 Opus,2024-02-29,,,,"hTnDa4gn8RYduCEYqoNywe,6SNzvpd6kXXxqpJoaHsSDd,mYb9MGQD39RS8VdDyMqujr",
+claude-3-sonnet-20240229,Claude 3 Sonnet,2024-02-29,,,,"QLejPZXhjX6SQCQgzjNvCG,FD2ztfjFUeqGyrtF8yuCUB,AeRCEiG87bMFpxbxbmjCyn",
+claude-instant-1.2,Claude Instant,2023-08-09,,https://www.anthropic.com/news/releasing-claude-instant-1-2,,,
+o,Codex,,,https://platform.openai.com/docs/deprecations#2023-03-20-codex-models,was deprecated 2023-03-23,,
+code-cushman-002,Codex,,,https://platform.openai.com/docs/deprecations#2023-03-20-codex-models,was deprecated 2023-03-23,,
+code-davinci-002,GPT-3.5,,,https://platform.openai.com/docs/deprecations#base-gpt-models,"was deprecated 2024-01-04
+
+was likely released in early 2022 and was likely based on gpt-3.5
+
+from Wikipedia: Similar capabilities to text-davinci-003 but trained with supervised fine-tuning instead of reinforcement learning",,
+code-davinci-edit-001,GPT-3.5,,,https://platform.openai.com/docs/deprecations#edit-models-endpoint,was deprecated 2024-01-04,,
+curie,GPT-3 6.7B,,,https://platform.openai.com/docs/deprecations#base-gpt-models,was deprecated 2024-01-04,,
+davinci,GPT-3 175B (davinci),,,https://platform.openai.com/docs/deprecations#base-gpt-models,was deprecated 2024-01-04,,
+davinci-002,GPT-3 175B (davinci),,,https://platform.openai.com/docs/models#gpt-base,,,
+dbrx-base,DBRX,2024-03-27,databricks,https://huggingface.co/databricks/dbrx-base,,,
+dbrx-instruct,DBRX,2024-03-27,databricks,https://huggingface.co/databricks/dbrx-instruct,,"TTa3hu7PgRxHgizVreZsdJ,PMbefrjykQmTBpABMa7FJi",
+deepseek-coder-1.3b-base,DeepSeek Coder 1.3B,2023-11-02,deepseek-ai,https://huggingface.co/deepseek-ai/deepseek-coder-1.3b-base,,,
+deepseek-coder-1.3b-instruct,DeepSeek Coder 1.3B,2023-11-02,deepseek-ai,https://huggingface.co/deepseek-ai/deepseek-coder-1.3b-instruct,,,
+deepseek-coder-6.7b-base,DeepSeek Coder 6.7B,2023-11-02,deepseek-ai,https://huggingface.co/deepseek-ai/deepseek-coder-6.7b-base,,,
+deepseek-coder-6.7b-instruct,DeepSeek Coder 6.7B,2023-11-02,deepseek-ai,https://huggingface.co/deepseek-ai/deepseek-coder-6.7b-instruct,,,
+deepseek-coder-7b-base-v1.5,DeepSeek Coder 6.7B,2024-01-25,deepseek-ai,https://huggingface.co/deepseek-ai/deepseek-coder-7b-base-v1.5,,,
+deepseek-coder-33b-base,DeepSeek Coder 33B,2023-11-02,deepseek-ai,https://huggingface.co/deepseek-ai/deepseek-coder-33b-base,,,
+deepseek-coder-33b-instruct,DeepSeek Coder 33B,2023-11-02,deepseek-ai,https://huggingface.co/deepseek-ai/deepseek-coder-33b-instruct,,,
+DeepSeek-Coder-V2-Base,DeepSeek-Coder-V2 236B,2024-06-17,deepseek-ai,https://huggingface.co/deepseek-ai/DeepSeek-Coder-V2-Base,,,
+DeepSeek-Coder-V2-Instruct,DeepSeek-Coder-V2 236B,2024-06-17,deepseek-ai,https://huggingface.co/deepseek-ai/DeepSeek-Coder-V2-Instruct,,,
+deepseek-llm-7b-base,DeepSeek LLM 7B,2023-11-29,deepseek-ai,https://huggingface.co/deepseek-ai/deepseek-llm-7b-base,,,
+deepseek-llm-7b-chat,DeepSeek LLM 7B,2023-11-29,deepseek-ai,https://huggingface.co/deepseek-ai/deepseek-llm-7b-chat,,,
+deepseek-llm-67b-base,DeepSeek LLM 67B,2023-11-29,deepseek-ai,https://huggingface.co/deepseek-ai/deepseek-llm-67b-base,,,
+deepseek-llm-67b-chat,DeepSeek LLM 67B,2023-11-29,deepseek-ai,https://huggingface.co/deepseek-ai/deepseek-llm-67b-chat,,"82RTgqgiC2UuM5M37L3WWM,Cm4UkgA5TtmzQegrq3rbvm",
+deepseek-math-7b-base,DeepSeekMath 7B,2024-02-05,deepseek-ai,https://huggingface.co/deepseek-ai/deepseek-math-7b-base,,,
+DeepSeek-Prover-V1.5-Base,DeepSeek-Prover-V1.5,2024-08-15,deepseek-ai,https://huggingface.co/deepseek-ai/DeepSeek-Prover-V1.5-Base,,,
+DeepSeek-Prover-V1.5-RL,DeepSeek-Prover-V1.5,2024-08-15,deepseek-ai,https://huggingface.co/deepseek-ai/DeepSeek-Prover-V1.5-RL,,,
+DeepSeek-Prover-V1.5-SFT,DeepSeek-Prover-V1.5,2024-08-15,deepseek-ai,https://huggingface.co/deepseek-ai/DeepSeek-Prover-V1.5-SFT,,,
+DeepSeek-V2,DeepSeek-V2 (MoE-236B),2024-05-07,deepseek-ai,https://huggingface.co/deepseek-ai/DeepSeek-V2,,,
+DeepSeek-V2-Chat-0628,DeepSeek-V2 (MoE-236B),2024-06-28,deepseek-ai,https://huggingface.co/deepseek-ai/DeepSeek-V2-Chat-0628,,,
+DeepSeek-V2.5,DeepSeek-V2.5,2024-09-06,deepseek-ai,https://huggingface.co/deepseek-ai/DeepSeek-V2.5,,,
+DeepSeek-V2.5-1210,DeepSeek-V2.5,2024-12-10,deepseek-ai,https://huggingface.co/deepseek-ai/DeepSeek-V2.5-1210,,,DeepSeek-V2.5 (Dec 2024)
+Eurus-2-7B-PRIME,Eurus-2-7B-PRIME,2024-12-31,PRIME-RL,https://huggingface.co/PRIME-RL/Eurus-2-7B-PRIME,,RJm4u2vXF6PUmThJGzAfHE,
+gemini-1.0-pro-001,Gemini 1.0 Pro,2024-02-15,,https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.0-pro,"""Gemini 1.0 Pro is an NLP model that handles tasks like multi-turn text and code chat, and code generation.""
+
+April 9, 2025 - discontinuation date","ibpS8bs4z3wD3Hb6F3kpdV,iUdecHq9vU5utytzgTXzqY,NpJvYQDcmwbGgS5MzZUPUg",
+gemini-1.5-flash-001,Gemini 1.5 Flash,2024-05-23,,https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.5-flash,Gemini 1.5 Flash is a fast and versatile multimodal model for scaling across diverse tasks.,"Hc2ycMP6DyCZxCPjKbZFQU,CPpd4hqQHtZ5pUejBELwKb,U9GVBhYjRzU55YVjna5mMT",
+gemini-1.5-flash-002,Gemini 1.5 Flash,2024-09-24,,https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.5-flash,Gemini 1.5 Flash is a fast and versatile multimodal model for scaling across diverse tasks.,"PCLvrs4TEBtqQqcYeU8pAG,kDnfjYKQpnLGEjuhBc9AvM,QdGZ2m52PWt3EkLPbcoRwz,Hs7dxLcim5bsmuG2DqnnsA,8FtfWCm8DdAqF9rnMVwv8h",
+gemini-1.5-flash-8b-001,Gemini 1.5 Flash 8B,2024-10-03,,https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.5-flash-8b,Gemini 1.5 Flash-8B is a small model designed for lower intelligence tasks.,"jGY5Ee5P9dyStA4Fw5Pa6q,gFT36W4KU3wggLQ9nNCctg",
+gemini-1.5-flash-exp-0827,Gemini 1.5 Flash,2024-08-27,,,Gemini 1.5 Flash (2024-08-27),,
+gemini-1.5-pro-001,Gemini 1.5 Pro,2024-05-24,,https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.5-pro,"Gemini 1.5 Pro is a mid-size multimodal model that is optimized for a wide-range of reasoning tasks. 1.5 Pro can process large amounts of data at once, including 2 hours of video, 19 hours of audio, codebases with 60,000 lines of code, or 2,000 pages of text.","PKdqpKZ9tqDWyWJ7GksBWz,PxLmyq7PFfARAuqxg5oPtE,3S6fjGAMKWKK3zcdxkmh9H",
+gemini-1.5-pro-002,Gemini 1.5 Pro,2024-09-24,,https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.5-pro,"Gemini 1.5 Pro is a mid-size multimodal model that is optimized for a wide-range of reasoning tasks. 1.5 Pro can process large amounts of data at once, including 2 hours of video, 19 hours of audio, codebases with 60,000 lines of code, or 2,000 pages of text.","9TrLEEw8TvsyugyCjwvUvD,QyqLmgcJpeDMsnQyaaJVkR,fhCdyX9uUS4WPtjLiVdBdK",
+gemma-2-9b,Gemma 2 9B,,google,https://huggingface.co/google/gemma-2-9b,,,
+gemma-2-9b-it,Gemma 2 9B,2024-06-24,google,https://huggingface.co/google/gemma-2-9b-it,,"fQjoHKyUEPAuwdrBGfL8SG,Hdcqs42VnPNVBquXttexhq,WNE7cveVN8rsi7DmsFsFVy",
+gemma-2-27b,Gemma 2 27B,,google,https://huggingface.co/google/gemma-2-27b,,,
+gemma-2-27b-it,Gemma 2 27B,2024-06-24,google,https://huggingface.co/google/gemma-2-27b-it,,"ZUJxsJDpHnLXxNiDcvj22W,PM3GCQcVK7t2MujNp4F4kH,jD6rJdvfNPErKEz9qkpssj",
+glm-4,GLM-4,,,https://bigmodel.cn/pricing,[to be] Discontinued in June 2025,,
+glm-4-0520,GLM-4 (0520),2024-05-20,,https://bigmodel.cn/pricing,,,
+gpt-3.5-turbo-16k-0613,GPT-3.5 Turbo,2023-06-13,,https://platform.openai.com/docs/deprecations#2023-11-06-chat-model-updates,was deprecated 2024-09-13,,
+gpt-3.5-turbo-0125,GPT-3.5 Turbo,2024-01-25,,https://platform.openai.com/docs/models#gpt-3-5-turbo,The latest GPT-3.5 Turbo model with higher accuracy at responding in requested formats and a fix for a bug which caused a text encoding issue for non-English language function calls.,"eZaQhpbhbzbo3sbKGS5Efa,9tSgxGV3nzhTBpq7GcX7yx",
+gpt-3.5-turbo-0613,GPT-3.5 Turbo,2023-06-13,,https://platform.openai.com/docs/deprecations#2023-11-06-chat-model-updates,was deprecated 2024-09-13,,
+gpt-3.5-turbo-1106,GPT-3.5 Turbo,2023-11-06,,https://platform.openai.com/docs/models#gpt-3-5-turbo,"GPT-3.5 Turbo model with improved instruction following, JSON mode, reproducible outputs, parallel function calling, and more","enhRcQmfN6RFB2zu7R3Uxr,cJWh887zSiTtnxm9XAJVkr",
+gpt-4-32k-0314,GPT-4,2023-03-14,,https://platform.openai.com/docs/deprecations,to be shut down 2025-06-06,,
+gpt-4-32k-0613,GPT-4,2023-06-13,,https://platform.openai.com/docs/deprecations,to be shut down 2025-06-06,,
+gpt-4-0125-preview,GPT-4,2024-01-25,,https://platform.openai.com/docs/models#gpt-4-turbo-and-gpt-4,"GPT-4 is an older version of a high-intelligence GPT model, usable in Chat Completions. Learn more in the text generation guide. The knowledge cutoff for the latest GPT-4 Turbo version is December, 2023.","4j3WRhhruXrfaq9Jki3NDc,c4V7sc8TUNJ8wQKRhuA2Rv",
+gpt-4-0314,GPT-4,2023-03-14,,https://platform.openai.com/docs/models#gpt-4-turbo-and-gpt-4,"GPT-4 is an older version of a high-intelligence GPT model, usable in Chat Completions. Learn more in the text generation guide. The knowledge cutoff for the latest GPT-4 Turbo version is December, 2023.",,GPT-4 (Mar 2023)
+gpt-4-0613,GPT-4,2023-06-13,,https://platform.openai.com/docs/models#gpt-4-turbo-and-gpt-4,"GPT-4 is an older version of a high-intelligence GPT model, usable in Chat Completions. Learn more in the text generation guide. The knowledge cutoff for the latest GPT-4 Turbo version is December, 2023.","fu7pWqbSC4MUBdwv3GFNa5,WsSrH8oHBm7m7vq9yTRqSC",GPT-4 (Jun 2023)
+gpt-4-1106-preview,GPT-4,2023-11-06,,https://platform.openai.com/docs/models#gpt-4-turbo-and-gpt-4,"GPT-4 is an older version of a high-intelligence GPT model, usable in Chat Completions. Learn more in the text generation guide. The knowledge cutoff for the latest GPT-4 Turbo version is December, 2023.","AWewipyfSQb8hXtS8d4fNL,VBStRVGFi47EVz2pn33xu4",GPT-4 Preview (Nov 2023)
+gpt-4-1106-vision-preview,GPT-4V,,,,,,
+gpt-4-turbo,GPT-4 Turbo,2023-11-06,,https://openai.com/index/new-models-and-developer-products-announced-at-devday/,"First version of GPT-4 Turbo
+
+I didn't find reference to it in release / deprecation notes. ",,
+gpt-4-turbo-2024-04-09,GPT-4 Turbo,2024-04-09,,https://platform.openai.com/docs/models#gpt-4-turbo-and-gpt-4,"GPT-4 is an older version of a high-intelligence GPT model, usable in Chat Completions. Learn more in the text generation guide. The knowledge cutoff for the latest GPT-4 Turbo version is December, 2023.","TaCoN7eyPQEfDWXqs2MpcF,AZAJomaSEfZtqYqXUre9fS,MZABVPEY8VCPAyCZ4iir68",
+gpt-4o-2024-05-13,GPT-4o,2024-05-13,,https://platform.openai.com/docs/models#gpt-4o,"GPT-4o (“o” for “omni”) is our versatile, high-intelligence flagship model. It accepts both text and image inputs, and produces text outputs (including Structured Outputs). 
+The knowledge cutoff for GPT-4o models is October, 2023.","Y59q8WbEDp2HH8oovyJCj9,Uqsvq9TAGoqD2xpKfhHBmS,9cCn5aW522cTRxJSE69crm",GPT-4o (May 2024)
+gpt-4o-2024-08-06,GPT-4o,2024-08-06,,https://platform.openai.com/docs/models#gpt-4o,"GPT-4o (“o” for “omni”) is our versatile, high-intelligence flagship model. It accepts both text and image inputs, and produces text outputs (including Structured Outputs). 
+The knowledge cutoff for GPT-4o models is October, 2023.","fairJpL9VekDBKxYHG9ZoG,ZQgz8AGm4KHin9MFupLu58,mBUKqiVQsqXd3qmdtKP5UP,BhMT5JGDGaz4FvSyNLYmok,SmT4ukjkxsXZvFExMMVFgW",GPT-4o (Aug 2024)
+gpt-4o-2024-11-20,GPT-4o,2024-11-20,,https://platform.openai.com/docs/models#gpt-4o,"GPT-4o (“o” for “omni”) is our versatile, high-intelligence flagship model. It accepts both text and image inputs, and produces text outputs (including Structured Outputs). 
+The knowledge cutoff for GPT-4o models is October, 2023.","gULKGqAe9nG9syxmYMtkhi,D3G2BKGnh6YSvw4bEYSdiY,buNVL2TWcdVgxAcMfVE8xJ,SNDo6TsviYYTiH2kCmf7Pr,Z7HU95T8eema56EpLtECvG",GPT-4o (Nov 2024)
+gpt-4o-mini-2024-07-18,GPT-4o mini,2024-07-18,,https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/,"GPT-4o mini (“o” for “omni”) is a fast, affordable small model for focused tasks. It accepts both text and image inputs, and produces text outputs (including Structured Outputs). It is ideal for fine-tuning, and model outputs from a larger model like GPT-4o can be distilled to GPT-4o-mini to produce similar results at lower cost and latency.
+
+The knowledge cutoff for GPT-4o-mini models is October, 2023.","L9yfwZC3snsKZshBXTaXjc,5iyKgWVhAmNwrA5rNL7MbW",
+grok-2-0813,Grok-2,2024-08-13,,,,,
+grok-2-1212,Grok-2,2024-12-12,,https://x.ai/blog/grok-1212,"""Our latest text model supporting structured outputs, with improved efficiency, speed and capabilities.""","83DRJD4FvjwqU9eStRaNiU,Kpck3pLw3veM5Mt7WZAb8G,PpSVDb67Ucbxpcd8JQv5ii,7rbXSQ8hFiXCCFv2vtqiiH,kinyvFjqSqUiY5FyYv7tsA",
+grok-2-mini-0813,Grok-2 mini,2024-08-13,,,,,
+grok-2-vision-1212,Grok-2,2024-12-12,,https://x.ai/blog/grok-1212,"""Our latest image understanding model with increased context window that can process a wide variety of visual information, including documents, diagrams, charts, screenshots, and photographs.""",,
+Hermes-2-Theta-Llama-3-70B,Hermes 2 Theta Llama-3 70B,2024-06-20,NousResearch,https://huggingface.co/NousResearch/Hermes-2-Theta-Llama-3-70B,,"DHdeZNynu4VtRp2VGkCGvd,ZAVTwsDqrvbWbqSgeNdXFd,63MnE4e4AXvbQ585MaWTFv",
+INTELLECT-MATH,INTELLECT-MATH,,PrimeIntellect,https://huggingface.co/PrimeIntellect/INTELLECT-MATH,,,
+Llama-2-70b-chat-hf,Llama 2-70B,2023-07-18,meta-llama,https://huggingface.co/meta-llama/Llama-2-70b-chat-hf,The chat 70B model in HF transformers format,"evPjJw9SKqq3TieSdxrSQn,4bkXhqCNoe6RpTe9taJ7kR,NLk2oE4rzSFihPzF95peHr",
+Llama-3.1-8B-Instruct,Llama 3.1-8B,2024-07-23,meta-llama,https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct,,"WWS3aotkrymLmBBDhhtvWQ,gyxR3YTcmh4UcKZkET5pPX,6SY8iSf5uKn7SrCzzrabPb",
+Llama-3.1-70B-Instruct,Llama 3.1-70B,2024-07-23,meta-llama,https://huggingface.co/meta-llama/Llama-3.1-70B-Instruct,,"MEwMcmSV32JHrsNoAq4BFL,6JiXiQ67iyiC7cFFRiogvs,X2tQXGELXtEbc2VX6gARd7",
+Llama-3.1-405B-Instruct,Llama 3.1-405B,2024-07-23,meta-llama,https://huggingface.co/meta-llama/Llama-3.1-405B-Instruct,,"S5QYXSvQBRSbUbXSnAGbMm,ZR7amdUBRr5Cke8Aoz4snr,2fQJP3brRApfBdQq7Zy3bm",
+Llama-3.1-Tulu-3-70B-DPO, Tulu 3 (Tülu 3) 70B,2024-11-21,allenai,https://huggingface.co/allenai/Llama-3.1-Tulu-3-70B-DPO,,"5JgivNDZp2D7Lc7cpDhS28,Hf2ESooSteQK99yFjhFm8t,FGcofc566CradiNmHUGqVB",
+Llama-3.2-90B-Vision-Instruct,Llama 3.2 90B,2024-09-24,meta-llama,https://huggingface.co/meta-llama/Llama-3.2-90B-Vision-Instruct,,"9SSHEP95FYVZvHDdoHSRy3,iHRmwxsh8M3FGun8x5mxkt,LHRL6nQJZXGJmYppR7kbGw",
+Llama-3.3-70B-Instruct,Llama 3.3 70B,2024-12-06,meta-llama,https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct,,"TxXS78Wg2pSCDbpmeJuzQn,DeaDxFfiQtCTdnZPH7Awaf,ZjsXQpZ7SsejXDo52aetZZ",
+Meta-Llama-3-8B-Instruct,Llama 3-8B,2024-04-18,meta-llama,https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct,,"iT3BBFWjsZk2rKHKeJDsM8,BURdKU7mhUX4YMPUDoFsed,7P5HLaaD6DBjNYFx7o6Jma",
+Meta-Llama-3-70B-Instruct,Llama 3-70B,2024-04-18,meta-llama,https://huggingface.co/meta-llama/Meta-Llama-3-70B-Instruct,,"jrvutCoFFG4KxYtU7REdpe,dekbZbU3BtiQZNKG8Txaax,6RD3A6J432TZzxrKYRxph2",
+Ministral-3B,Ministral 3B,,,https://ai.azure.com/explore/models/Ministral-3B/version/1/registry/azureml-mistral,,,
+ministral-3b-2410,Ministral 3B,2024-10-16,,,,"bJV4D8SEo9zMJPEYTTXJNZ,YNhHxRT9Ee2uEWWJh9RXuP",
+ministral-8b-2410,Ministral 8B,2024-10-16,,,,"DGEzZA6nvTne4MEGSuo3Tm,hqdiKcvEPSRyvenUVB9qxM",
+Ministral-8B-Instruct-2410,Ministral 8B,2024-10-16,mistralai,https://huggingface.co/mistralai/Ministral-8B-Instruct-2410,,,
+Mistral-7B-Instruct-v0.1,Mistral 7B,,mistralai,https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.1,,,
+Mistral-7B-Instruct-v0.2,Mistral 7B,,mistralai,https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2,,,
+Mistral-7B-Instruct-v0.3,Mistral 7B,2024-05-27,mistralai,https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3,,"YbQkMPC2GtNLhxqTEhhVsa,6xHApTdQAWM9e5oCvKYS3W",
+Mistral-7B-v0.1,Mistral 7B,,mistralai,https://huggingface.co/mistralai/Mistral-7B-v0.1,,,
+Mistral-7B-v0.3,Mistral 7B,,mistralai,https://huggingface.co/mistralai/Mistral-7B-v0.3,,,
+mistral-large-2402,Mistral Large,2024-02-26,,,,"dDeREdDJ5bVyci3APZxzWb,gypQecfFNK2x4pNGDtGMDv,ZVHvk3GTPUNTgjc5w3vkhW",
+mistral-large-2407,Mistral Large 2,2024-07-24,,,,"ZQPNnicTuhuscJvni85PFY,div9uE9eovqykqx883kSpE,bHLfPfZj8HgD9Gef75NtrM",
+Mistral-Large-Instruct-2407,Mistral Large 2,2024-07-24,mistralai,https://huggingface.co/mistralai/Mistral-Large-Instruct-2407,,,
+Mistral-Large-Instruct-2411,Mistral Large 2,2024-11-15,mistralai,https://huggingface.co/mistralai/Mistral-Large-Instruct-2411,,,
+Mistral-Nemo-Base-2407,Mistral NeMo,2024-07-18,mistralai,https://huggingface.co/mistralai/Mistral-Nemo-Base-2407,,,
+Mistral-Nemo-Instruct-2407,Mistral NeMo,2024-07-18,mistralai,https://huggingface.co/mistralai/Mistral-Nemo-Instruct-2407,,,
+Mixtral-8x7B-Instruct-v0.1,Mixtral 8x7B,2023-12-11,mistralai,https://huggingface.co/mistralai/Mixtral-8x7B-Instruct-v0.1,,"Sn2qbB2HiySe7NcG28jnyM,4PTATufH2ra3guNeLwT9p9",
+Mixtral-8x7B-v0.1,Mixtral 8x7B,2023-12-11,mistralai,https://huggingface.co/mistralai/Mixtral-8x7B-v0.1,,,
+Mixtral-8x22B-Instruct-v0.1,Mixtral 8x22B,2024-04-17,mistralai,https://huggingface.co/mistralai/Mixtral-8x22B-Instruct-v0.1,,,
+Mixtral-8x22B-v0.1,Mixtral 8x22B,2024-04-17,mistralai,https://huggingface.co/mistralai/Mixtral-8x22B-v0.1,,,
+mpt-7b-instruct,MPT-7B,2023-05-05,mosaicml,https://huggingface.co/mosaicml/mpt-7b-instruct,,,
+mpt-30b-instruct,MPT-30B,2023-06-22,mosaicml,https://huggingface.co/mosaicml/mpt-30b-instruct,,,
+nemotron-4-340b-Instruct,Nemotron-4 340B,2024-06-14,nvidia,https://huggingface.co/nvidia/Nemotron-4-340B-Instruct,,,
+o1-2024-12-17_medium,o1,2024-12-17,,https://platform.openai.com/docs/models#o1,"The o1 series of models are trained with reinforcement learning to perform complex reasoning. o1 models think before they answer, producing a long internal chain of thought before responding to the user. Learn about the capabilities of o1 models in our reasoning guide.
+
+There are two model types available today:
+
+o1: reasoning model designed to solve hard problems across domains
+o1-mini: fast and affordable reasoning model for specialized tasks
+The latest o1 model supports both text and image inputs, and produces text outputs (including Structured Outputs). o1-mini currently only supports text inputs and outputs.
+
+The knowledge cutoff for o1 and o1-mini models is October, 2023.","Uczhz7MKLstjLkSbbGuwdN,AzanNoyhhVrtQi63Azo6hu,KvcqycaJpCQMBigiEosyzC",o1 (medium)
+o1-mini-2024-09-12_medium,o1-mini,2024-09-12,,https://platform.openai.com/docs/models#o1,"The o1 series of models are trained with reinforcement learning to perform complex reasoning. o1 models think before they answer, producing a long internal chain of thought before responding to the user. Learn about the capabilities of o1 models in our reasoning guide.
+
+There are two model types available today:
+
+o1: reasoning model designed to solve hard problems across domains
+o1-mini: fast and affordable reasoning model for specialized tasks
+The latest o1 model supports both text and image inputs, and produces text outputs (including Structured Outputs). o1-mini currently only supports text inputs and outputs.
+
+The knowledge cutoff for o1 and o1-mini models is October, 2023.","4NiUpCrLfz3oFaerkrMeBt,FaRZDKSriUbS3Brt6qprP9,QUTfpiKjphedrKg8H6fGzF,QKY2tL2pcQ33bDkdMCQzdr,hC2FY4WuKm6BLgPhbWeZDY",o1-mini (medium)
+o1-preview-2024-09-12,o1-preview,2024-09-12,,https://platform.openai.com/docs/models#o1,"The o1 series of models are trained with reinforcement learning to perform complex reasoning. o1 models think before they answer, producing a long internal chain of thought before responding to the user. Learn about the capabilities of o1 models in our reasoning guide.
+
+There are two model types available today:
+
+o1: reasoning model designed to solve hard problems across domains
+o1-mini: fast and affordable reasoning model for specialized tasks
+The latest o1 model supports both text and image inputs, and produces text outputs (including Structured Outputs). o1-mini currently only supports text inputs and outputs.
+
+The knowledge cutoff for o1 and o1-mini models is October, 2023.","7CkADTsoNbDd88uqYbqfwj,8Uu6XsSJCKwcwhXDt8vgzq,Cprjaj9JQ9MY5NCXqeQR5H",o1-preview
+open-mistral-7b,Mistral 7B,2023-09-27,,,,"5XuVuHeUDekHqjUy2P8gww,9ZQaypWLwLHbQrqTWfoEor",
+open-mistral-nemo-2407,Mistral NeMo,2024-07-18,,,,"XCSWtbDquA7FUiWfd7kh9q,9qCrggpoq8FjQWVQhHaGBT",
+open-mixtral-8x7b,Mixtral 8x7B,2023-12-11,,,,"Y6KPSujFepdwqinKLf9mDF,GN3Hez798byishFw3U6cpp",
+open-mixtral-8x22b,Mixtral 8x22B,2024-04-17,,,,"ifAM3DJBdm5eU9Y2DjaEvW,cGMb2vs9NhfkwZJsQXzLmQ",
+qwen1.5-7b-chat,Qwen1.5-7B,2024-02-04,Qwen,https://huggingface.co/Qwen/Qwen1.5-7B-Chat,,,
+qwen1.5-14b-chat,Qwen1.5-14B,2024-02-04,Qwen,https://huggingface.co/Qwen/Qwen1.5-14B-Chat,,,
+qwen1.5-32b-chat,Qwen1.5-32B,2024-04-03,Qwen,https://huggingface.co/Qwen/Qwen1.5-32B-Chat,,9K6c9b6v9zQrQYtw827BDn,
+qwen1.5-72b-chat,Qwen1.5-72B,2024-02-04,Qwen,https://huggingface.co/Qwen/Qwen1.5-72B-Chat,,NeqeQSxHmdUNLk9Ytpo6qo,
+qwen1.5-110b-chat,Qwen1.5-110B,2024-04-25,Qwen,https://huggingface.co/Qwen/Qwen1.5-110B-Chat,,,
+qwen2-72b-instruct,Qwen2-72B,2024-06-07,Qwen,https://huggingface.co/Qwen/Qwen2-72B-Instruct,,"Pex6SpYJX8ZPySncfNNy7H,9mWoY9fM2ifKvDg3xaug6h",
+qwen2.5-72b-instruct,Qwen2.5-72B,2024-09-19,Qwen,https://huggingface.co/Qwen/Qwen2.5-72B-Instruct,,"WtALgW6VSFdihDZWXRm2AZ,ni4DJboYYpdRssVeAuro2V,67YbVQfJh7sd77KH3zFgTn",
+text-ada-001,InstructGPT 350M,,,https://platform.openai.com/docs/deprecations#instructgpt-models,was deprecated 2024-01-04,,
+text-babbage-001,InstructGPT 1.3B,,,https://platform.openai.com/docs/deprecations#instructgpt-models,was deprecated 2024-01-04,,
+text-curie-001,InstructGPT 6B,,,https://platform.openai.com/docs/deprecations#instructgpt-models,was deprecated 2024-01-04,,
+text-davinci-001,InstructGPT 175B,,,https://platform.openai.com/docs/deprecations#instructgpt-models,was deprecated 2024-01-04,,
+text-davinci-002,GPT-3.5,2022-03-15,,https://platform.openai.com/docs/deprecations#instructgpt-models,"was deprecated 2024-01-04
+
+from Wikipedia: Similar capabilities to text-davinci-003 but trained with supervised fine-tuning instead of reinforcement learning
+
+from CaLM: Text-davinci-002 is one of the models in the GPT 3.5 series. Like former InstructGPT models[1], it undergoes a training process that includes supervised fine-tuning using examples crafted by humans. Originating from code-davinci-002, this model possesses the capability to modify or augment existing text with new content, extending beyond mere text completion",,
+text-davinci-003,GPT-3.5,,,https://platform.openai.com/docs/deprecations#instructgpt-models,"was deprecated 2024-01-04
+
+from CaLM: text-davinci-003, a variant within the GPT 3.5 series, builds upon text-davinci-002[1,2] and incorporates reinforcement learning (PPO) through reward models. It applies instruction tuning based on reinforcement learning from human feedbac",,
+text-davinci-edit-001,GPT-3.5,,,https://platform.openai.com/docs/deprecations#edit-models-endpoint,was deprecated 2024-01-04,,
+text-embedding-3-large,text-embedding-3-large,2024-01-25,,https://platform.openai.com/docs/models#embeddings,"Embeddings are a numerical representation of text that can be used to measure the relatedness between two pieces of text. Embeddings are useful for search, clustering, recommendations, anomaly detection, and classification tasks. You can read more about our latest embedding models in the announcement blog post.",,
+text-embedding-3-small,text-embedding-3-small,2024-01-25,,https://platform.openai.com/docs/models#embeddings,"Embeddings are a numerical representation of text that can be used to measure the relatedness between two pieces of text. Embeddings are useful for search, clustering, recommendations, anomaly detection, and classification tasks. You can read more about our latest embedding models in the announcement blog post.",,
+WizardLM-2-8x22B,WizardLM-2 8x22B,2024-04-15,alpindale,https://huggingface.co/alpindale/WizardLM-2-8x22B,,"MQJA3RUjsQzSubGJiukZ7A,4bAYQuh4heJoTNhapVZLNB",
+Yi-1.5-34B,Yi-1.5-34B,2024-05-13,01-ai,https://huggingface.co/01-ai/Yi-1.5-34B,,,
+Yi-1.5-34B-Chat,Yi-1.5-34B,2024-05-13,01-ai,https://huggingface.co/01-ai/Yi-1.5-34B-Chat,,"Jwi8JTeeTxJuJY8qidxngw,bH5kVfLE53CxY3qWmB9C5K",
+Yi-34B,Yi-34B,2023-11-02,01-ai,https://huggingface.co/01-ai/Yi-34B,,,
+Yi-34B-Chat,Yi-34B,2023-11-22,01-ai,https://huggingface.co/01-ai/Yi-34B-Chat,,"WxMpEBcTf8qPFPz4BrF86B,nzy4SGSeKGzQSKJLWExKpV",
+DeepSeek-V3,DeepSeek-V3,2024-12-26,deepseek-ai,https://huggingface.co/deepseek-ai/DeepSeek-V3,,"Vwo3nMA8g2gGBCyTdKFMQJ,exvQCLCiga6gE7zvQNp2Z6,7saSEhfVvXuz4yTcGy5u2y,iKvrBWEvZT26XhFBRcavtf,aXcfCytWFYNk7E5AZGMzLb",
+DeepSeek-R1,DeepSeek-R1,2025-01-20,deepseek-ai,https://huggingface.co/deepseek-ai/DeepSeek-R1,,"XPHDbKVUCPNCs5NoVWU8S3,XVqLs2khGFSNwEbHJTEgRU,bBY5VZzpDkmTBdSSvu5Ups",
+phi-4,Phi-4,2024-12-12,microsoft,https://huggingface.co/microsoft/phi-4,,"RAwuPRwJedy7P2KeQhEmr8,PnvmfAHVxH9oXfcdcUeUZ3,5mmrBSQb7hVSJ9VYtNm46i",
+Phi-3-medium-128k-instruct ,phi-3-medium 14B,2024-04-23,microsoft,https://huggingface.co/microsoft/Phi-3-medium-128k-instruct,,"bDS2AGEf3AywbVcdDyAKZK,njA86GC9DzSXyiZWtUxXiD",
+phi-1_5,Phi-1.5,2023-09-11,microsoft,https://huggingface.co/microsoft/phi-1_5,,,
+Phi-3.5-MoE-instruct,Phi-3.5-MoE,2024-08-17,microsoft,https://huggingface.co/microsoft/Phi-3.5-MoE-instruct,,,
+phi-2,Phi-2,2023-12-12,microsoft,https://huggingface.co/microsoft/phi-2,,,
+doubao-pro-32k,Doubao-pro,2024-10-28,,,"for 'doubao-pro-32k', I'm relying on https://www.volcengine.com/docs/82379/1302004
+",,
+mistral-small-2501,Mistral Small 3,2025-01-25,,https://mistral.ai/news/mistral-small-3/,,"NbsnvBsMoMizozbPZY8LLb,oDq358GfyV5Au65scERdVo,b4vEwq8UVmGmAKh4eqp6G3",
+qwen2.5-32b-instruct,Qwen2.5-32B,2024-09-17,Qwen,https://huggingface.co/Qwen/Qwen2.5-32B-Instruct,,"Nk4mmCXFH3mEyCYnQPdPx5,d6JihAFVqUy3u9suNt4P3L,NRCNnCCL5aQKsZf6cKC69Z",
+DeepSeek-R1-Distill-Llama-70B,DeepSeek-R1-Distill-Llama-70B,2025-01-20,deepseek-ai,,,"89zcekqEYnE8zhwG4pR5Nu,f6pnAATjxmrFJS353EjQKi,oPDoTJFMhMNvU4sybYu2jQ",
+DeepSeek-R1-Distill-Qwen-32B,,2025-01-20,deepseek-ai,,,,
+DeepSeek-R1-Distill-Qwen-14B,,2025-01-20,deepseek-ai,,,"8UqaLobhmNJLuPGTTpeaCw,R8XGt5ScHpmTbD5DnXR59V",
+DeepSeek-R1-Distill-Llama-8B,,2025-01-20,deepseek-ai,,,,
+DeepSeek-R1-Distill-Qwen-7B,,2025-01-20,deepseek-ai,,,,
+DeepSeek-R1-Distill-Qwen-1.5B,,2025-01-20,deepseek-ai,,,,
+o3-mini-2025-01-31_medium,o3-mini,2025-01-31,,,,"ehvA5nisC7GMbgbyy3Z4Et,2RiSB2ii5kf2Q6fDBv2P3E,ajytUBY9bDPNNxuBfi5UBS,UjGSDrmEPtVoVGdVSbUMsb,U8CjtcxudQeP2cnMNixfJH",o3-mini (medium)
+gemini-2.0-flash-001,Gemini 2.0 Flash,2025-02-05,,,,"fbszwTApm3f28z5VA6oXBK,SqwGZz2UfTmbvPiw2rq3LH,ZnGSRrKbiEnuju4kk4sgVb,PDACS493wNy85eyMC9NULs,5RpSr8gJZfcZn586aV2hDW,ne2Anciuxh2k3VXGYG4Nqy",Gemini 2.0 Flash (Feb 2025)
+gemini-2.0-pro-exp-02-05,Gemini 2.0 Pro,2025-02-05,,,,"g5YE7G6DXb45EH4HxEdiht,fvDt6HaHV5d3gSEuavixsv,RaMuNb5qvzGzMveuZuhEAZ",Gemini 2.0 Pro Exp (Feb 2025)
+gemini-2.0-flash-thinking-exp-01-21,Gemini 2.0 Flash Thinking,2025-01-21,,,,"ag9w2w4xa47ghZaWt5oZey,cXz2gsCmGYSvQ6Ey4LDiN7",Gemini 2.0 Flash Thinking Exp
+s1-32B,s1,2025-01-14,simplescaling,https://huggingface.co/simplescaling/s1-32B,,,
+o3-mini-2025-01-31_high,o3-mini,2025-01-31,,,,"MzsTvCEEfEpzn4WvxYdJkX,3VDhPT5WvzjJZkRc36Kuvi,Mjx6vYbgAb2DHXK8xcupX8,JJqAHUs8LTLCKhnTWQUVTi,GZeqEeaiEhnLJSzVogT9N4",o3-mini (high)
+o1-2024-12-17_high,o1,2024-12-17,,https://platform.openai.com/docs/models#o1,"The o1 series of models are trained with reinforcement learning to perform complex reasoning. o1 models think before they answer, producing a long internal chain of thought before responding to the user. Learn about the capabilities of o1 models in our reasoning guide.
+
+There are two model types available today:
+
+o1: reasoning model designed to solve hard problems across domains
+o1-mini: fast and affordable reasoning model for specialized tasks
+The latest o1 model supports both text and image inputs, and produces text outputs (including Structured Outputs). o1-mini currently only supports text inputs and outputs.
+
+The knowledge cutoff for o1 and o1-mini models is October, 2023.","NAkCFiFiDSN3NXMj7HMvMS,jVXtRkTBDnqH8p4sjVUbgN,BhT6UhKLcghqng7J8NbPWH,bynpttv6jLvbXTY7ktnBpk",o1 (high)
+o1-mini-2024-09-12_high,o1-mini,2024-09-12,,https://platform.openai.com/docs/models#o1,"The o1 series of models are trained with reinforcement learning to perform complex reasoning. o1 models think before they answer, producing a long internal chain of thought before responding to the user. Learn about the capabilities of o1 models in our reasoning guide.
+
+There are two model types available today:
+
+o1: reasoning model designed to solve hard problems across domains
+o1-mini: fast and affordable reasoning model for specialized tasks
+The latest o1 model supports both text and image inputs, and produces text outputs (including Structured Outputs). o1-mini currently only supports text inputs and outputs.
+
+The knowledge cutoff for o1 and o1-mini models is October, 2023.","X2gKewiGPZx5DLFEddUUqW,4DWnpJowAfeQDHc2xDNy2C,9zhPZLvNeUPQ7JBSpTwKPp,JPadBpaxxGpdvTXtfHuvPV,2ekT2UzaebvmGprKvmeeEa",o1-mini (high)
+claude-3-7-sonnet-20250219,Claude 3.7 Sonnet,2025-02-24,,,,"PyNEkFCfMEReodeE2oiPhh,6uSKG2QxR8atueXmDWAPXn,N2NcmgmHyGJ9HNmQe5yvcS,m7X2ppkiEkweCtFppiRW8S,dvMWxBZMaxp6adP9zGszYG,MCv2wDLoTzqMRrN8dATPEv",
+mistral-large-2411,Mistral Large 2,2024-11-18,,,,"MMqL6fQSwsBKAdBSfxrYpU,n9gpXfUzo8SbWqvrG2q4xM,beRGgJXTJggTi8PPEZNoZ5,kPCieUA4pKDto2xEfvQqSL,cEvTUVyxAqq5UDgsGQbvLM",
+claude-3-7-sonnet-20250219_16K,Claude 3.7 Sonnet,2025-02-24,,,,"Vn3Ug88CRbxEaJhLbRzAWD,hWeVyRo3hN5H4AspNc9cuf,64LAJymM6eXDkRZb92Mdg8,PU7LXbdNB8Unfvu4qCeJZF,8wm9yBTJHoY6ui45QTpjn2",Claude 3.7 Sonnet (16k thinking)
+Phi-4-mini-instruct,Phi-4 Mini,2025-02-27,microsoft,,,,
+gpt-4.5-preview-2025-02-27,GPT-4.5,2025-02-27,,,,"dodibSv7pk8GtqeMy4YLQg,9DCJMt7YsTMDenTdX4Db6V,japqZFi3FS7um32EHG6wwW",GPT-4.5 Preview (Feb 2025)
+claude-3-7-sonnet-20250219_64K,Claude 3.7 Sonnet,2025-02-24,,,,"Rfy7A5TbRK343mTyQkeGt7,DoU54Xy93J3MxztC4uxwYy,JBX3gYnFhUbDVb4oDpaCax,QW3FUBn5qtAFEX4oQuzEAV,epCyFNTf6vyUi5Dby7GeTq",Claude 3.7 Sonnet (64k thinking)
+claude-3-7-sonnet-20250219_32K,Claude 3.7 Sonnet,2025-02-24,,,,"iv9yfwZ9vTznxQfvJF6J7p,dSuGgEbnQErengjEboPn62,WHGMHrneqJs4nefAh4TjZR,VzgR6YSTMWX3dFDwQgmFpM,aZqVpPa4SWHapN9QHEoEm3",Claude 3.7 Sonnet (32k thinking)
+gemma-3-27b-it,Gemma 3 27B,2025-03-12,google,https://huggingface.co/google/gemma-3-27b-it,,"FtxiPnS7ZH5qLrmFgp4ca2,A3ZGeCNhHMp55ZjtRtCGVB,amrtN7UjAtuyEmv5DaGshP",
+gemma-3-12b-it,Gemma 3 12B,2025-03-12,google,https://huggingface.co/google/gemma-3-12b-it,,,
+gemma-3-4b-it,Gemma 3 4B,2025-03-12,google,https://huggingface.co/google/gemma-3-4b-it,,,
+gemma-3-1b-it,Gemma 3 1B,2025-03-12,google,https://huggingface.co/google/gemma-3-1b-it,,,
+mistral-small-2503,Mistral Small 3.1,2025-03-17,,https://mistral.ai/news/mistral-small-3-1,,"S8bBDAbucsFceirHxeEDvu,Kas7Y5PBsT7Li5Wm6Y8mj8,JxqtHWrwCtYoQYBB3jVqB9",
+EXAONE-Deep-32B,EXAONE Deep 32B,2025-03-18,LGAI-EXAONE,https://huggingface.co/LGAI-EXAONE/EXAONE-Deep-32B,,,
+gemini-2.5-pro-exp-03-25,Gemini 2.5 Pro,2025-03-25,,,,WKjzEQdfnBHnYeZoKeCWnB,Gemini 2.5 Pro Exp (Mar 2025)
+DeepSeek-V3-0324,DeepSeek-V3,2025-03-24,deepseek-ai,https://huggingface.co/deepseek-ai/DeepSeek-V3-0324,,"VjfLwKbT6kTprYsMGcz2YT,YFyn28VJ6m2hfop3KGRkBs,VpsMexBEhXkPYJBe7v6Fk9",DeepSeek-V3 (Mar 2025)
+qwen-max-2025-01-25,Qwen2.5-Max,2025-01-25,,,,"GBf7rqHkGGzfX87V37F9mH,GFZDNH95TnVegNrEtmUT2Q,hWj4Vg5DgUWxhZrT4LWKeU,F77vDPynTKJbz7m2bt7Py8,PZt4Yb9bpXVPDoPi4uTxwK",
+qwen-plus-2025-01-25,Qwen Plus,2025-01-25,,,,"QtraMoKiQRRpZc9txpFAYF,J3WoEpLKAJZWGGpyBVCCCn,AULNJG2C75JBP6uaiAgj3P",
+qwen-turbo-2024-11-01,Qwen Turbo,2024-11-01,,,,"9Ke5At9bYuf56SmKJJ7Sz7,jWV936hYKg6rYcPEynzEEt,G5gxbTH33S7LXA29o5fgmv",
+qwen2.5-14b-instruct,Qwen2.5-14B,2025-02-26,Qwen,,,,
+qwen2.5-7b-instruct,Qwen2.5-7B,2025-02-26,Qwen,,,,
+qwen2-57b-a14b-instruct,Qwen2-57B-A14B,2024-11-28,Qwen,,,,
+qwen2-7b-instruct,Qwen2-7B,2024-11-28,Qwen,,,,
+qvq-max-2025-03-25,QVQ-Max,2025-03-25,,,,,
+Llama-4-Scout-17B-16E-Instruct,Llama 4 Scout,2025-04-05,meta-llama,,,"MsXAXDEKP3xBKtiA7aTBBG,c6rTyTFCeoHMBzC2QwjxFL,T3X5DeC47iqCaoRYXu5k8L,m96PYCivjSmTVDd27zw84m,bhjLDA5A7gddsX5cAYKma8",
+Llama-4-Maverick-17B-128E-Instruct-FP8,Llama 4 Maverick,2025-04-05,meta-llama,,,"LyHy99ubGCqBhoaksQjkiF,HkjCosgMFq5QXB2CyTyU7r,GJEpPThqUxXJBSbvkuXVnw,M2qDSno6GVHdWjcdGRGy9D,QjvBS34fsngfBBMZUirSyh",Llama 4 Maverick (FP8)
+qwq-plus,QWQ-Plus,2025-04-08,,,,PtxHF8BH8WuNdNfDnutGBb,
+reka-flash-3,Reka Flash 3,2025-03-10,RekaAI,https://huggingface.co/RekaAI/reka-flash-3,,,
+Llama-3.2-11B-Vision-Instruct,Llama 3.2 11B,2024-09-24,meta-llama,https://huggingface.co/meta-llama/Llama-3.2-11B-Vision-Instruct,,,
+Qwen2-VL-72B-Instruct,,2024-08-29,Qwen,,,,
+Llama-3.2-3B-Instruct,Llama 3.2 3B,2024-09-24,meta-llama,,,,
+Llama-3.2-1B-Instruct,Llama 3.2 1B,2024-09-24,meta-llama,,,,
+Qwen2-VL-7B-Instruct,,2024-08-29,Qwen,,,,
+amazon.nova-pro-v1:0,Amazon Nova Pro,2024-12-03,,,,,
+Phi-3-mini-4k-instruct,,,microsoft,https://huggingface.co/microsoft/Phi-3-mini-4k-instruct,,,
+OLMo-2-1124-13B-Instruct,,,allenai,,,,
+Phi-3-mini-128k-instruct,,,microsoft,,,,
+Phi-3-small-8k-instruct,,,microsoft,,,,
+c4ai-command-r-08-2024,,2024-08-30,CohereForAI,,,,
+amazon.nova-micro-v1:0,Amazon Nova Micro,2024-12-03,,,,,
+c4ai-command-r-plus-08-2024,Command R+,2024-08-30,CohereForAI,,,,
+amazon.nova-lite-v1:0,Amazon Nova Lite,2024-12-03,,,,,
+QwQ-32B-Preview,QwQ-32B,2024-11-28,Qwen,,,,
+o3-mini-2025-01-31_low,o3-mini,2025-01-31,,,,,
+sonar,,,,https://docs.perplexity.ai/guides/model-cards,,,Perplexity Sonar
+Qwen2.5-Coder-32B-Instruct,Qwen2.5-Coder (32B),2024-11-21,Qwen,,,,
+c4ai-command-a-03-2025,Cohere Command A,2025-03-13,CohereForAI,,,,
+codestral-2501,Codestral,2025-01-13,,https://mistral.ai/news/codestral-2501,,,
+grok-3-beta,Grok-3,2025-04-09,,,,"evNX52n9sxzGLwthPEEeFF,DKTzh9kSoipZGkDsC4NGf3,WBwJHBpCqKQvZBnoZ4Y8H9,i9eqMbaVTDDuCxWxzGHxyU,DzjFQArKFTZHioQVwKYVtX,Sp6nNR4N7zRGrqPCkgJ4Mn",
+grok-3-mini-beta_low,Grok-3 mini,2025-04-09,,,,"McxfQdC5aypnD3STwZUBjH,TTmhagb2ovbi7GJnDxEfrj,5QyCm49Lce2PpGVcZLomCz,mvPsa56tAProncoFm6Y7aW,9FTMS2t6Ksm43CduHeqtJr,MgQteQgHEpQAAQw7DFbh2u",
+grok-3-mini-beta_high,Grok-3 mini,2025-04-09,,,,"Skcwy4eaZjtyW54X8GZCLC,fPtize44vDPcDAzMFuAurw,HMm8XaDBr4CQdMFddasEWb,HQ3GnLdmf8Cy6dceb8d7cL,Z83F6bJ7Ne5rXaXwgR2xWT",
+gemini-1.5-flash-0514,Gemini 1.5 Flash,2024-05-14,,https://cloud.google.com/vertex-ai/generative-ai/docs/release-notes#May_14_2024,"Gemini 1.5 Flash (gemini-1.5-flash-preview-0514) is available in Preview. Gemini 1.5 Flash is a multimodal model designed for fast, high volume, cost-effective text generation and chat applications. It can analyze text, code, audio, PDF, video, and video with audio.",,
+gpt-4.1-2025-04-14,GPT-4.1,2025-04-14,,,,"Gj8pd5gU9r4LqwDK8XZ4mL,VAQtARXUPTpdxGKMekUSbX,YyJXPVXJjN5EnLfYjfCTrQ,QjrnNoyDCzDYmFxgfYCuTm,NPeiYpjbscreYnFkHPvcNB,Q6UB2pBAwruHWXCNQvKGVv",
+gpt-4.1-mini-2025-04-14,GPT-4.1 mini,2025-04-14,,,,"6ybVweWdTfiCuirnS2BKXD,dXHddeGRX7JRVa5UNfad5C,cXbbdQDW2jeYassmRuZYpU,jM7D9QpAZVXuP93HM6ST5w,ephMMUGDANc9iVTNNuuoZx,dD8n3SgLkV3Xse6bbG8mMB",
+gpt-4.1-nano-2025-04-14,GPT-4.1 nano,2025-04-14,,,,"K4TfMXsaPd4Z46zFmiV4Rf,azWfeFPP6zSocuQX3JYBU5,3qLHwibDhgtWEbKGwxUYVa,R4GLbPVPjbATgWQJFjF2EQ,chtQvebcoaE33KkhAjbCnw",
+Qwen2.5-VL-72B-Instruct,Qwen2.5-72B,2024-09-19,Qwen,https://huggingface.co/Qwen/Qwen2.5-VL-72B-Instruct,,,
+gemini-exp-1206,,2025-12-06,,,,,
+gemini-2.0-flash-exp,Gemini 2.0 Flash,2024-12-11,,,,,
+qwen2.5-max,Qwen2.5-Max,2025-01-28,,,,,
+gemini-2.0-flash-lite,,2025-02-05,,,,,
+gemini-2.0-flash-lite-001,,2025-02-25,,,,,
+gemini-2.0-flash-lite-preview-02-05,,2025-02-05,,,,,
+sonar-pro,,2025-01-21,,,,,
+Dracarys2-Llama-3.1-70B-Instruct,,2024-08-14,abacusai,https://huggingface.co/abacusai/Dracarys2-Llama-3.1-70B-Instruct,,,
+Dracarys2-72B-Instruct,,2024-09-30,abacusai,https://huggingface.co/abacusai/Dracarys2-72B-Instruct,,,
+learnlm-1.5-pro-experimental,,,,,,,
+gemini-2.0-flash-02-05,Gemini 2.0 Flash,2025-02-05,,,,,
+claude-3-7-sonnet-20250219_8K,Claude 3.7 Sonnet,2025-02-24,,,,,Claude 3.7 Sonnet (8k thinking)
+CUA,Computer-Using Agent (CUA),2025-01-23,,,,,
+o3-2025-04-16_medium,o3,2025-04-16,,,,"gdKs4ZBYcVz8oUvzu5VkDB,jMt3i7znSKdhTniR6o6b5C",o3 (medium)
+o3-2025-04-16_high,o3,2025-04-16,,,,"evANZQ9oQTdGYbDERw7VrD,6anLU9CfBBNQkWyJG2GDCa,gXQ6PHjaqbjcBj6KV9UKSK,dECNMk4kcUtMHLzb3tgaCX,6oW3GceNQznewQJRwLigth",o3 (high)
+o4-mini-2025-04-16_medium,o4-mini,2025-04-16,,,,"V7txn6pocsNsZSzt5dkZkJ,8ozSh7wRxGu4zL4yjyEF2L,eTCmM2smJzrY4xjJnrboT2",o4-mini (medium)
+o4-mini-2025-04-16_high,o4-mini,2025-04-16,,,,"9Sgsz5XCjscuZkexf7MX9c,TVsxkJ8ZyfMVmVx88Qq3KN,E9AfnKpQrDsFWKmXMhBbJS,ir92cSRbauVXmQfqTSaiSx,727ixGKZ7A7G8LmavE2ScL",o4-mini (high)
+gemini-2.5-flash-preview-04-17,Gemini 2.5 Flash,2025-04-17,,,,"9Ffc6sAe5z8ZAMgUEbktr6,KpZYG5nvdJ6QYweLz6dn5a,couunRFGbK2kR3995XSJ6Z",Gemini 2.5 Flash Preview (Apr 2025)
+o3-2025-04-16_low,o3,2025-04-16,,,,"47yfmJgzAJq5DfUcBGVebV,4yHiPUjmcqGZijjnQ6V25s",o3 (low)
+o4-mini-2025-04-16_low,o4-mini,2025-04-16,,,,"BMEJvvJKbhHa5q7YTuCeAi,HTqZUWGZ8bXbJ4dBRUZ3wv",o4-mini (low)
+gemini-2.5-pro-preview-03-25,Gemini 2.5 Pro,2025-04-09,,,,,
+yi-lightning,Yi-Lightning,2024-12-02,,https://huggingface.co/papers/2412.01253,Only a tehnical report available,,
+Llama-4-Maverick-17B-128E-Instruct,Llama 4 Maverick,2025-04-05,meta-llama,,,,Llama 4 Maverick
+QwQ-32B-Preview-Q8_0-GGUF,QwQ-32B,2024-12-27,Triangle104,https://huggingface.co/Triangle104/QwQ-32B-Preview-Q8_0-GGUF,,,
+Qwen2.5-Coder-32B-Instruct-Q8_0-GGUF,Qwen2.5-32B,2025-02-16,Lucy-in-the-Sky,https://huggingface.co/Lucy-in-the-Sky/Qwen2.5-Coder-32B-Instruct-Q8_0-GGUF,,,
+Llama-3.3-70B-Instruct-Q8_0-GGUF-draft,Llama 3.3 70B,2025-03-20,hope-hui,https://huggingface.co/hope-hui/Llama-3.3-70B-Instruct-Q8_0-GGUF-draft,,,
+gemini-2.0-flash-thinking-exp-1219,Gemini 2.0 Flash Thinking,2024-12-19,,,,,
+qwen-plus-2025-04-28,Qwen3-235B-A22B,2025-04-28,,,,,
+gpt-3.5-turbo-instruct,GPT-3.5 Turbo,2023-09-18,,,,,
+gpt2-xl,GPT-2 (1.5B),2019-11-05,openai-community,https://huggingface.co/openai-community/gpt2-xl,,,
+llama3.1:405b-instruct-q4_K_M,Llama 3.1-405B,2024-07-23,,https://ollama.com/library/llama3.1:405b-instruct-q4_K_M,,,
+llama3.3:70b-instruct-q8_0,Llama 3.3 70B,2024-12-06,,https://ollama.com/library/llama3.3:70b-instruct-q8_0,,,
+llama3.1:8b-instruct-q8_0,Llama 3.1-8B,2024-07-23,,https://ollama.com/library/llama3.1:8b-instruct-q8_0,,,
+phi4:14b-q8_0,Phi-4,2025-02-26,,https://ollama.com/library/phi4:14b-q8_0,,,
+Phi-4-reasoning,Phi-4,2025-04-30,microsoft,https://huggingface.co/microsoft/Phi-4-reasoning,,,
+gemma2:27b-instruct-q8_0,Gemma 2 27B,2024-06-27,,https://ollama.com/library/gemma2:27b-instruct-q8_0,,,
+chatgpt-4o-11-25-2024,GPT-4o,2024-11-20,,,"Inferred from release notes, OpenAI API currently doesn't specify specific dates.",,
+chatgpt-4o-01-29-2025,GPT-4o,2025-01-29,,,"Inferred from release notes, OpenAI API currently doesn't specify specific dates.",,
+chatgpt-4o-03-27-2025,GPT-4o,2025-03-27,,,"Inferred from release notes, OpenAI API currently doesn't specify specific dates.",,
+Qwen3-235B-A22B,Qwen3-235B-A22B,2025-04-29,Qwen,https://huggingface.co/Qwen/Qwen3-235B-A22B,,,
+Qwen3-30B-A3B,Qwen3-30B-A3B,2025-04-29,Qwen,https://huggingface.co/Qwen/Qwen3-30B-A3B,,,
+gemini-2.5-flash-preview-04-17 (16K thinking),Gemini 2.5 Flash,2025-04-17,,https://developers.googleblog.com/en/start-building-with-gemini-25-flash/,,,
