@@ -15,26 +15,27 @@ const companyMapping = {
     "all": []
 };
 
-const dropdownContainer = d3.select("#vis")
-    .insert("div", ":first-child")
-    .style("margin-bottom", "20px");
 
-dropdownContainer.append("label")
-    .attr("for", "companySelect")
-    .text("Select Company: ")
-    .style("margin-right", "10px");
+// const dropdownContainer = d3.select("#vis")
+//     .insert("div", ":first-child")
+//     .style("margin-bottom", "20px");
 
-const dropdown = dropdownContainer.append("select")
-    .attr("id", "companySelect")
-    .style("padding", "5px")
-    .style("font-size", "14px");
+// dropdownContainer.append("label")
+//     .attr("for", "companySelect")
+//     .text("Select Company: ")
+//     .style("margin-right", "10px");
 
-dropdown.selectAll("option")
-    .data(["all", ...Object.keys(companyMapping)])
-    .enter()
-    .append("option")
-    .text(d => d.charAt(0).toUpperCase() + d.slice(1))
-    .attr("value", d => d);
+// const dropdown = dropdownContainer.append("select")
+//     .attr("id", "companySelect")
+//     .style("padding", "5px")
+//     .style("font-size", "14px");
+
+// dropdown.selectAll("option")
+//     .data(["all", ...Object.keys(companyMapping)])
+//     .enter()
+//     .append("option")
+//     .text(d => d.charAt(0).toUpperCase() + d.slice(1))
+//     .attr("value", d => d);
 
 const svg = d3.select("#vis")
     .append("svg")
