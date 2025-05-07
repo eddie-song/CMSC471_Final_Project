@@ -1,4 +1,4 @@
-const margin = { top: 50, right: 200, bottom: 100, left: 80 };
+const margin = { top: 50, right: 200, bottom: 175, left: 80 };
 const width = 1400 - margin.left - margin.right;
 const height = 800 - margin.top - margin.bottom;
 
@@ -17,24 +17,45 @@ const companyMapping = {
 
 const dropdownContainer = d3.select("#vis")
     .insert("div", ":first-child")
-    .style("margin-bottom", "20px");
+    .style("margin-bottom", "20px")
+    .style("display", "flex")
+    .style("gap", "20px")
+    .style("align-items", "center");
 
-dropdownContainer.append("label")
+const companyDropdownDiv = dropdownContainer.append("div")
+    .style("display", "flex")
+    .style("align-items", "center");
+
+companyDropdownDiv.append("label")
     .attr("for", "companySelect")
     .text("Select Company: ")
     .style("margin-right", "10px");
 
-const dropdown = dropdownContainer.append("select")
+const companyDropdown = companyDropdownDiv.append("select")
     .attr("id", "companySelect")
     .style("padding", "5px")
     .style("font-size", "14px");
 
-dropdown.selectAll("option")
+companyDropdown.selectAll("option")
     .data(["all", ...Object.keys(companyMapping)])
     .enter()
     .append("option")
     .text(d => d.charAt(0).toUpperCase() + d.slice(1))
     .attr("value", d => d);
+
+const modelDropdownDiv = dropdownContainer.append("div")
+    .style("display", "flex")
+    .style("align-items", "center");
+
+modelDropdownDiv.append("label")
+    .attr("for", "modelSelect")
+    .text("Select Model: ")
+    .style("margin-right", "10px");
+
+const modelDropdown = modelDropdownDiv.append("select")
+    .attr("id", "modelSelect")
+    .style("padding", "5px")
+    .style("font-size", "14px");
 
 const svg = d3.select("#vis")
     .append("svg")
@@ -103,7 +124,6 @@ svg.append("g")
         d3.select("#tooltip").style("display", "none");
     });
 
-// Add y-axis with tooltip
 const yAxisGroup = svg.append("g")
     .attr("class", "y-axis")
     .call(yAxis);
@@ -111,7 +131,6 @@ const yAxisGroup = svg.append("g")
 yAxisGroup.selectAll("text")
     .style("font-size", "14px");
 
-// Add y-axis label with tooltip
 const yAxisLabel = svg.append("text")
     .attr("transform", "rotate(-90)")
     .attr("y", -margin.left + 20)
@@ -132,7 +151,6 @@ const yAxisLabel = svg.append("text")
         d3.select("#tooltip").style("display", "none");
     });
 
-// Also add tooltip to y-axis ticks
 yAxisGroup.selectAll(".tick")
     .style("cursor", "help")
     .on("mouseover", function(event) {
@@ -156,11 +174,39 @@ function isModelFromCompany(modelName, company) {
     return companyMapping[company].some(prefix => modelName.toLowerCase().startsWith(prefix.toLowerCase()));
 }
 
-function updateVisualization(data, selectedCompany) {
+function updateModelDropdown(data, selectedCompany) {
+    const models = [...data.keys()].filter(model => isModelFromCompany(model, selectedCompany));
+    
+    models.unshift("all");
+
+    const modelOptions = modelDropdown.selectAll("option")
+        .data(models);
+
+    modelOptions.exit().remove();
+
+    modelOptions.enter()
+        .append("option")
+        .merge(modelOptions)
+        .text(d => d === "all" ? "All Models" : d)
+        .attr("value", d => d);
+
+    modelDropdown.property("value", "all");
+}
+
+function shouldShowModel(model, selectedCompany, selectedModel) {
+    if (selectedModel === "all") {
+        return isModelFromCompany(model, selectedCompany);
+    }
+    return model === selectedModel;
+}
+
+function updateVisualization(data, selectedCompany, selectedModel = "all") {
     svg.selectAll(".model-line").remove();
     svg.selectAll("circle").remove();
 
-    const filteredData = new Map([...data].filter(([model]) => isModelFromCompany(model, selectedCompany)));
+    const filteredData = new Map([...data].filter(([model]) => 
+        shouldShowModel(model, selectedCompany, selectedModel)
+    ));
 
     filteredData.forEach((points, model) => {
         const validPoints = points
@@ -217,17 +263,26 @@ function updateVisualization(data, selectedCompany) {
 d3.csv("data/benchmarks_runs.csv").then(rawData => {
     const modelData = d3.group(rawData, d => d.model);
     
-    dropdown.on("change", function() {
+    updateModelDropdown(modelData, "all");
+
+    companyDropdown.on("change", function() {
         const selectedCompany = this.value;
-        updateVisualization(modelData, selectedCompany);
+        updateModelDropdown(modelData, selectedCompany);
+        updateVisualization(modelData, selectedCompany, "all");
     });
 
-    updateVisualization(modelData, "all");
+    modelDropdown.on("change", function() {
+        const selectedCompany = companyDropdown.property("value");
+        const selectedModel = this.value;
+        updateVisualization(modelData, selectedCompany, selectedModel);
+    });
+
+    updateVisualization(modelData, "all", "all");
 
     svg.append("text")
         .attr("x", width / 2)
         .attr("y", -margin.top / 2)
         .attr("text-anchor", "middle")
         .style("font-size", "24px")
-        .text("Model Performance Across Different Tasks");
+        .text("Model Performance Across Different Tasks in 2025");
 });
