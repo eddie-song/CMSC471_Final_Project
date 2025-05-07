@@ -4,19 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Final Project</title>
+    <title>CMSC471 Final Project</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link title="timeline-styles" rel="stylesheet"
+        href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
 </head>
 
-<body>
+<body style="transform: scale(1);">
     <div class="container">
-        <h1>Final Project</h1>
-        <div id="vis1" ></div>
-        <div id="vis2"></div>
+        <div id="timeline-embed" style="width: 100%; height: 350px"></div>
+        <div style="display: flex; flex-direction: row; ">
+            <div id="vis1" style="margin: auto;"></div>
+            <div id="vis2" style="margin: auto;"></div>
+            <div id="vis3"style="margin: auto"> </div>
+        </div>
         <input type="number" id="startDate" value="1955" min="1950" max="2025">
         <div id="tooltip"></div>
-    </div>
+
+    </div >
     <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
+    <script src="js/timeline.js"></script>
     <script src="js/script.js"></script>
 </body>
 

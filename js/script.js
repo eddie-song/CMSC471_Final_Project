@@ -1,7 +1,9 @@
 const margin = { top: 50, right: 200, bottom: 100, left: 80 };
-const width = 1000 - margin.left - margin.right;
-const height = 700 - margin.top - margin.bottom;
+const width = 850 - margin.left - margin.right;
+const height = 600 - margin.top - margin.bottom;
 const tooltip = d3.select("#tooltip");
+
+
 
 let ModelSizeData = []
 let BenchmarkData = []
@@ -149,16 +151,15 @@ function InitBenchmarkVis() {
 
     const lineGenerator = d3.line()
     svg.append("path").attr("class", "horiz")
-        .attr("d", lineGenerator([[margin.left, height / 4], [width + margin.left -10 , height / 4]]))
+        .attr("d", lineGenerator([[margin.left, height / 4 + margin.top/4], [width + margin.left , height / 4 + margin.top/4]]))
         .attr('stroke', 'grey')
         .attr('fill', 'none');
 
     svg.append("text")
-        .attr("transform", `translate(${margin.left + width / 4},${height / 4 - 5})`)
+        .attr("transform", `translate(${margin.left + width / 3},${height / 4 + margin.top/5})`)
         .style("text-anchor", "middle")
         .text("Human Performance as benchmark (set to zero)")
-        .attr("opacity", .7)
-        .attr("z-index", 10)
+        .attr("opacity", .5)
 
 
     UpdateBenchmarkVis()

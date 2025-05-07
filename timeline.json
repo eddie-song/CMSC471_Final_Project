@@ -1,0 +1,59 @@
+{
+  "events": [
+    {
+      "start_date": {"year": "1950"},
+      "text": {"headline": "Turing Test Introduced", "text": "Alan Turing proposes a test to determine if a machine can exhibit intelligent behavior indistinguishable from that of a human."},
+      "media": {"url": "https://www.leanix.net/hs-fs/hubfs/undefined-2.jpeg?width=550&height=309&name=undefined-2.jpeg", "caption": "Alan Turing, a pioneer in AI."}
+    },
+    {
+      "start_date": {"year": "1951"},
+      "text": {"headline": "Theseus the Maze-solving Mouse", "text": "Claude Shannon builds an electromechanical mouse that learns to navigate a maze, illustrating machine learning concepts."},
+      "media": {"url": "https://upload.wikimedia.org/wikipedia/commons/7/70/Theseus_Maze_by_Claude_Shannon%2C_1952_-_MIT_Museum_-_DSC03702.JPG", "caption": "Claude Shannon's Theseus, a foundational experiment in AI."}
+    },
+    {
+      "start_date": {"year": "1958"},
+      "text": {"headline": "Perceptron Algorithm", "text": "Frank Rosenblatt invents the Perceptron, an early neural network model designed for pattern recognition."},
+      "media": {"url": "https://ids.si.edu/ids/deliveryService?id=NMAH-72-361&max=600", "caption": "Frank Rosenblatt, creator of the Perceptron."}
+    },
+    {
+      "start_date": {"year": "1992"},
+      "text": {"headline": "TD-Gammon", "text": "Gerald Tesauro develops TD-Gammon, a backgammon-playing AI using reinforcement learning, achieving near-expert play."},
+      "media": {"url": "https://achievements.ai/wp-content/uploads/2021/01/td-gammon-program-developed-by-gerald-tesauro-1.jpg", "caption": "TD-Gammon, one of the first successful uses of reinforcement learning."}
+    },
+    {
+      "start_date": {"year": "1997"},
+      "text": {"headline": "Deep Blue Defeats Kasparov", "text": "IBM's Deep Blue defeats world chess champion Garry Kasparov, showcasing brute-force search and evaluation strategies."},
+      "media": {"url": "https://cdn.theatlantic.com/media/mt/science/kasparov615.jpg", "caption": "Deep Blue's victory marked a milestone in game-playing AI."}
+    },
+    {
+      "start_date": {"year": "2012"},
+      "text": {"headline": "AlexNet Wins ImageNet", "text": "AlexNet, a deep convolutional neural network, wins the ImageNet competition by a large margin, demonstrating the power of deep learning."},
+      "media": {"url": "https://miro.medium.com/v2/resize:fit:1400/0*xFY-719luaVR1wjY.png", "caption": "AlexNet's success popularized deep learning techniques."}
+    },
+    {
+      "start_date": {"year": "2016"},
+      "text": {"headline": "AlphaGo Defeats Lee Sedol", "text": "DeepMind's AlphaGo defeats world Go champion Lee Sedol, demonstrating the potential of deep reinforcement learning."},
+      "media": {"url": "https://i.redd.it/zmwmm6lx05cb1.jpg", "caption": "AlphaGo marked a significant advance in AI game playing."}
+    },
+    {
+      "start_date": {"year": "2018"},
+      "text": {"headline": "BERT: Breakthrough in NLP", "text": "Google's BERT model significantly improves natural language understanding tasks, establishing a new standard for NLP benchmarks."},
+      "media": {"url": "https://miro.medium.com/v2/resize:fit:1200/0*ZenLUXS5ubzvc9lB.png", "caption": "BERT demonstrated the potential of transformer models in NLP."}
+    },
+    {
+      "start_date": {"year": "2019"},
+      "text": {"headline": "GPT-2 Released", "text": "OpenAI releases GPT-2, demonstrating coherent and versatile natural language generation with 1.5 billion parameters."},
+      "media": {"url": "https://miro.medium.com/v2/resize:fit:2800/1*pitt26-yeiJlxaWS4G2-_w.jpeg", "caption": "GPT-2 significantly advanced natural language generation."}
+    },
+    {
+      "start_date": {"year": "2020"},
+      "text": {"headline": "AlphaFold Solves Protein Folding", "text": "DeepMind's AlphaFold predicts protein structures with unprecedented accuracy, solving a decades-old biological problem."},
+      "media": {"url": "https://cen.acs.org/content/dam/cen/99/28/WEB/09928-leadcon-protein.jpg", "caption": "AlphaFold's breakthrough in structural biology."}
+    },
+    {
+      "start_date": {"year": "2023"},
+      "text": {"headline": "GPT-4 Released", "text": "OpenAI's GPT-4 pushes language generation boundaries, enabling complex text generation and reasoning capabilities."},
+      "media": {"url": "https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg", "caption": "GPT-4, a leading LLM for natural language tasks."}
+    }
+  ]
+}
