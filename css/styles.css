@@ -10,6 +10,7 @@ body {
 }
 
 .container {
+    width: 2500px;
     margin: 0 auto;
 }
 
