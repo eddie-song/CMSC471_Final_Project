@@ -22,35 +22,46 @@ const benchmarkStartYear = 1997
 
 
 
+function addSelectedMilestone(milestone) {
+    const name = milestone?.milestone_name;
+    const milestoneType = milestone?.milestone_type == null ? "model" : milestone?.milestone_type;
+    if (name != null) {
+        if (milestoneType == "compute") {
+            selectedComputes.add(name)
+        } else if (milestoneType == "model") {
+            selectedModels.add(name)
+        }
+    }
+
+}
+
+async function populateSelectedMilestones() {
+    const res = await fetch("./timeline.json")
+    const json = await res.json()
+    if (json?.events == null) { return }
+
+    for (const event of json.events) {
+        console.log(event)
+        addSelectedMilestone(event)
+    }
+}
+
+
+populateSelectedMilestones();
 let timeline = new TL.Timeline('timeline-embed', 'timeline.json');
 
-timeline.on("change", (d) => {
-    const data = timeline.getDataById(d?.unique_id)
-    const milestone = data?.milestone_name;
-    const milestoneType = data?.milestone_type == null ? "size" : data?.milestone_type;
 
-    const endYear = data?.start_date?.data?.year
+timeline.on("change", (d) => {
+    const event = timeline.getDataById(d?.unique_id)
+    const endYear = event?.start_date?.data?.year
     if (endYear != null) {
-        updateGraphs(endYear, milestone, milestoneType);
+        timelineYear = parseInt(endYear)
+        UpdateModelSizeVis()
+        UpdateBenchmarkVis()
+        UpdateComputeVis()
+
     }
 })
-
-
-
-
-function updateGraphs(endYear, milestone, milestoneType) {
-    timelineYear = parseInt(endYear)
-
-    if (milestoneType == "compute") {
-        selectedComputes.add(milestone)
-    } else if (milestoneType == "size") {
-        selectedModels.add(milestone)
-    }
-
-    UpdateModelSizeVis()
-    UpdateBenchmarkVis()
-    UpdateComputeVis()
-}
 
 function addTitle(svg, title) {
     svg.append("text")
@@ -65,7 +76,7 @@ function addTitle(svg, title) {
 
 
 function getOpacity(name, selected, defaultOpacity) {
-    
+
     if (selected.size == 0 || selected.has(name)) {
         return defaultOpacity
     }
@@ -73,6 +84,20 @@ function getOpacity(name, selected, defaultOpacity) {
     return .1
 }
 
+const GraphYAxisFormat = (y) => {
+    if (y < .0001) {
+        return d3.format(".2e")(y)
+    }
+    if (y < 10) {
+        return d3.format(".3f")(y)
+    }
+
+    if (y < 1000000) {
+        return d3.format(",")(y)
+    }
+
+    return d3.format(".2s")(y).replace(/T/, " Trillion").replace(/G/, " Billion").replace(/M/, " Million").replace(/k/, " Thousand")
+}
 function UpdateModelSizeVis() {
     let data = modelSizeData.filter(d => { return (d.date.getYear() + 1900) <= timelineYear })
     const g = d3.select("#vis1").select("svg").select("g")
@@ -89,7 +114,7 @@ function UpdateModelSizeVis() {
         .range([height, 0]);
 
     const xAxisUpdated = d3.axisBottom(x).tickFormat(d => d3.timeFormat("%Y")(d));
-    const yAxisUpdated = d3.axisLeft(y).tickFormat(d3.format(".1e"));
+    const yAxisUpdated = d3.axisLeft(y).tickFormat(GraphYAxisFormat);
 
     xAxis.transition()
         .duration(500)
@@ -113,7 +138,7 @@ function UpdateModelSizeVis() {
                 .on("mouseover", function (event, d) {
                     d3.select(this).style("cursor", "pointer")
                     tooltip.transition().duration(100).style("opacity", .95);
-                    tooltip.html(`<strong><span style="color: ${d.color};"> ${d.Model}</span> (${d.date.getYear() + 1900})</strong>${d.Parameters} parameters`)
+                    tooltip.html(`<strong><span style="color: ${d.color};"> ${d.Model}</span> (${d.date.getYear() + 1900})</strong>${GraphYAxisFormat(d.Parameters)} parameters`)
                         .style("left", (event.pageX + 10) + "px")
                         .style("top", (event.pageY - 28) + "px");
 
@@ -379,6 +404,7 @@ function UpdateBenchmarkVis() {
 
 
 
+// computeXFormat = () => {d3.format(".2s") }
 function UpdateComputeVis() {
     let computeEndYear = (timelineYear < computeStartYear ? computeStartYear : timelineYear + 1)
     let data = computeData.filter(d => { return (d.date.getYear() + 1900) <= computeEndYear })
@@ -396,7 +422,8 @@ function UpdateComputeVis() {
         .domain(d3.extent(computeData, d => d.cost))
         .range([height, 0]);
 
-    const yAxisUpdated = d3.axisLeft(y).tickFormat(d3.format(".1e"));
+
+    const yAxisUpdated = d3.axisLeft(y).tickFormat(GraphYAxisFormat);
     const xAxisUpdated = d3.axisBottom(x).tickFormat(d3.timeFormat("%Y"));
 
     yAxis.transition()
@@ -408,13 +435,19 @@ function UpdateComputeVis() {
     g.selectAll("circle").data(data).join(
         function (enter) {
             return enter.append("circle")
-
+                .on("click", function (event, d) {
+                    if (selectedComputes.has(d.name)) {
+                        selectedComputes.delete(d.name)
+                    } else {
+                        selectedComputes.add(d.name)
+                    }
+                })
                 .on("mouseover", function (event, d) {
                     if (d) {
                         d3.select(this).style("cursor", "pointer")
                         d3.select(this).attr("r", 12)
                         tooltip.transition().duration(100).style("opacity", .95);
-                        tooltip.html(`<strong>${d.name}</strong>$${d.cost > 100000 ? d3.format(".2e")(d.cost) : d3.format(".3")(d.cost)}`)
+                        tooltip.html(`<strong>${d.name}</strong>$${GraphYAxisFormat(d.cost)}`)
                             .style("left", (event.pageX + 10) + "px")
                             .style("top", (event.pageY - 28) + "px");
                     }

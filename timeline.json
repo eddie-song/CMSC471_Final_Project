@@ -53,7 +53,7 @@
       }
     },
     {
-      "milestone_type": "none",
+      "milestone_name": "ELIZA",
       "start_date": {
         "year": "1966"
       },
@@ -66,13 +66,44 @@
         "caption": "ELIZA, a pioneering chatbot demonstrating natural language processing."
       }
     },
+
+    
     {
       "milestone_name": "Neocognitron",
       "start_date": {
         "year": "1980"
       },
       "text": {
-        "headline": "Japanese Handwriting Recognition: Neocognitron",
+        "headline": "Neocognitron: Japanese Handwriting Recognition",
+        "text": ""
+      },
+      "media": {
+        "url": "",
+        "caption": ""
+      }
+    },
+    {
+      "milestone_name": "Cray X-MP",
+      "milestone_type":"compute",
+      "start_date": {
+        "year": "1983"
+      },
+      "text": {
+        "headline": "Cray X-MP: First Supercompute to process 1 GFLOP",
+        "text": ""
+      },
+      "media": {
+        "url": "https://i0.wp.com/cray-history.net/wp-content/uploads/2021/08/X-MP-Brochure-ver-2.jpg?ssl=1",
+        "caption": ""
+      }
+    },
+    {
+      "milestone_name": "Back-propagation",
+      "start_date": {
+        "year": "1986"
+      },
+      "text": {
+        "headline": "Back Propagation",
         "text": ""
       },
       "media": {
@@ -110,7 +141,7 @@
     },
     {
       "milestone_type": "compute", 
-      "milestone_name": "16-processor Beowulf clusters",
+      "milestone_name": "NASA Beowulf Cluster",
       "start_date": {
         "year": "1997"
       },
