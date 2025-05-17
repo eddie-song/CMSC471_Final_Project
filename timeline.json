@@ -10,8 +10,9 @@
   },
   "events": [
     {
+      "milestone_name": "Theseus",
       "start_date": {
-        "year": "1951"
+        "year": "1950"
       },
       "text": {
         "headline": "Theseus the Maze-solving Mouse",
@@ -23,11 +24,12 @@
       }
     },
     {
+      "milestone_name": "Perceptron Mark I",
       "start_date": {
-        "year": "1958"
+        "year": "1957"
       },
       "text": {
-        "headline": "Perceptron Algorithm",
+        "headline": "Perceptron Mark I Algorithm",
         "text": "Frank Rosenblatt invents the Perceptron, an early neural network model designed for pattern recognition."
       },
       "media": {
@@ -36,6 +38,22 @@
       }
     },
     {
+      "milestone_type": "compute",
+      "milestone_name": "IBM 7030 Stretch",
+      "start_date": {
+        "year": "1960"
+      },
+      "text": {
+        "headline": "IBM's First Supercomputer: IBM 7030 Stretch",
+        "text": ""
+      },
+      "media": {
+        "url": "",
+        "caption": ""
+      }
+    },
+    {
+      "milestone_type": "none",
       "start_date": {
         "year": "1966"
       },
@@ -49,19 +67,21 @@
       }
     },
     {
+      "milestone_name": "Neocognitron",
       "start_date": {
         "year": "1980"
       },
       "text": {
-        "headline": "Expert Systems Boom",
-        "text": "AI expert systems like MYCIN and DENDRAL gain popularity in medical diagnosis and scientific research, demonstrating rule-based reasoning."
+        "headline": "Japanese Handwriting Recognition: Neocognitron",
+        "text": ""
       },
       "media": {
-        "url": "https://redresscompliance.com/wp-content/uploads/2025/01/Early-AI-Systems-DENDRAL-and-MYCIN.webp",
-        "caption": "DENDRAL, an early expert system for scientific research"
+        "url": "",
+        "caption": ""
       }
     },
     {
+      "milestone_name": "TD-Gammon",
       "start_date": {
         "year": "1992"
       },
@@ -75,6 +95,36 @@
       }
     },
     {
+      "milestone_name": "Support Vector Machines",
+      "start_date": {
+        "year": "1995"
+      },
+      "text": {
+        "headline": "Support Vector Machines",
+        "text": ""
+      },
+      "media": {
+        "url": "",
+        "caption": ""
+      }
+    },
+    {
+      "milestone_type": "compute", 
+      "milestone_name": "16-processor Beowulf clusters",
+      "start_date": {
+        "year": "1997"
+      },
+      "text": {
+        "headline": "NASA HPC: The Beowulf Project",
+        "text": "NASA introduced the beowulf project as an alternative to supercomputers. Basic idea is that you have a cluster of processors that run in parallel."
+      },
+      "media": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Beowulf.jpg",
+        "caption": ""
+      }
+    },
+    {
+      "milestone_name": "Deep Blue",
       "start_date": {
         "year": "1997"
       },
@@ -88,12 +138,42 @@
       }
     },
     {
+      "milestone_name": "LeNet-5",
+      "start_date": {
+        "year": "1998"
+      },
+      "text": {
+        "headline": "LeNet-5",
+        "text": ""
+      },
+      "media": {
+        "url": "",
+        "caption": ""
+      }
+    },
+    {
+      "milestone_type": "compute",
+      "milestone_name": "NVIDIA GeForce GTX 280",
+      "start_date": {
+        "year": "2008"
+      },
+      "text": {
+        "headline": "NVIDIA releases CUDA",
+        "text": "NVIDIA created CUDA, which introduced GPU computing. These innovations drastically increased the computational power of processing. Made Geforce GTX 280"
+      },
+      "media": {
+        "url": "",
+        "caption": ""
+      }
+    },
+    {
+      "milestone_name": "AlexNet",
       "start_date": {
         "year": "2012"
       },
       "text": {
         "headline": "AlexNet Wins ImageNet",
-        "text": "AlexNet, a deep convolutional neural network, wins the ImageNet competition by a large margin, demonstrating the power of deep learning."
+        "text": "AlexNet, a deep convolutional neural network, wins the ImageNet competition by a large margin using CUDA and NVIDIA gpus, demonstrating the power of deep learning. Used NVIDIA GPUs and Cuda for parallel GPU computations. Using convolutional neural networks and leveraging the computational power of GPUs, AlexNet demonstrated that machines could achieve superhuman performance in image classification when designed effectively"
       },
       "media": {
         "url": "https://miro.medium.com/v2/resize:fit:1400/0*xFY-719luaVR1wjY.png",
@@ -101,6 +181,7 @@
       }
     },
     {
+      "milestone_name": "AlphaGo Lee",
       "start_date": {
         "year": "2016"
       },
@@ -114,6 +195,7 @@
       }
     },
     {
+      "milestone_name": "BERT-Large",
       "start_date": {
         "year": "2018"
       },
@@ -127,6 +209,7 @@
       }
     },
     {
+      "milestone_name": "GPT-2 (1.5B)",
       "start_date": {
         "year": "2019"
       },
@@ -140,6 +223,7 @@
       }
     },
     {
+      "milestone_name": "AlphaFold",
       "start_date": {
         "year": "2020"
       },
@@ -153,6 +237,7 @@
       }
     },
     {
+      "milestone_name": "GPT-4",
       "start_date": {
         "year": "2023"
       },

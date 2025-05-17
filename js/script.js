@@ -12,31 +12,41 @@ let modelTypes = ["Biology", "Games", "Image generation", "Language", "Multiple 
 let modelColors = modelTypes.reduce((a, d, i) => { return { ...a, [d]: d3.schemeCategory10[i] } }, {})
 let benchmarkColors = benchmarkTasks.reduce((a, d, i) => { return { ...a, [d]: d3.schemeCategory10[i] } }, {})
 
-let timelineYear = 1950
+let selectedModels = new Set();
+let selectedComputes = new Set();
+
+let timelineYear = 1949
 const computeStartYear = 1959
 const modelSizeStartYear = 1950
 const benchmarkStartYear = 1997
+
 
 
 let timeline = new TL.Timeline('timeline-embed', 'timeline.json');
 
 timeline.on("change", (d) => {
     const data = timeline.getDataById(d?.unique_id)
+    const milestone = data?.milestone_name;
+    const milestoneType = data?.milestone_type == null ? "size" : data?.milestone_type;
+
     const endYear = data?.start_date?.data?.year
     if (endYear != null) {
-        updateGraphs(endYear)
+        updateGraphs(endYear, milestone, milestoneType);
     }
-}
-)
+})
 
-/* 
-    TODO
-    - add Computer per dollar graph
-    - allow hovering/filtering points on params graph 
-*/
 
-function updateGraphs(endYear) {
-    timelineYear = endYear
+
+
+function updateGraphs(endYear, milestone, milestoneType) {
+    timelineYear = parseInt(endYear)
+
+    if (milestoneType == "compute") {
+        selectedComputes.add(milestone)
+    } else if (milestoneType == "size") {
+        selectedModels.add(milestone)
+    }
+
     UpdateModelSizeVis()
     UpdateBenchmarkVis()
     UpdateComputeVis()
@@ -54,11 +64,21 @@ function addTitle(svg, title) {
 }
 
 
+function getOpacity(name, selected, defaultOpacity) {
+    
+    if (selected.size == 0 || selected.has(name)) {
+        return defaultOpacity
+    }
+
+    return .1
+}
+
 function UpdateModelSizeVis() {
     let data = modelSizeData.filter(d => { return (d.date.getYear() + 1900) <= timelineYear })
     const g = d3.select("#vis1").select("svg").select("g")
     const xAxis = g.select(".xAxis")
     const yAxis = g.select(".yAxis")
+
 
     const x = d3.scaleTime()
         .domain([new Date(modelSizeStartYear, 0, 1), new Date(timelineYear, 0, 1)])
@@ -78,14 +98,20 @@ function UpdateModelSizeVis() {
     yAxis.transition()
         .duration(500)
         .call(yAxisUpdated)
-    // Scatter dots
-    g.selectAll("circle").data(data).join(
 
+    g.selectAll(".marker").data(data).join(
         function (enter) {
             return enter.append("circle")
+                .on("click", function (event, d) {
+                    if (selectedModels.has(d.Model)) {
+                        selectedModels.delete(d.Model)
+                    } else {
+                        selectedModels.add(d.Model)
+                    }
+                    UpdateModelSizeVis()
+                })
                 .on("mouseover", function (event, d) {
                     d3.select(this).style("cursor", "pointer")
-                    d3.select(this).attr("r", 7)
                     tooltip.transition().duration(100).style("opacity", .95);
                     tooltip.html(`<strong><span style="color: ${d.color};"> ${d.Model}</span> (${d.date.getYear() + 1900})</strong>${d.Parameters} parameters`)
                         .style("left", (event.pageX + 10) + "px")
@@ -101,18 +127,76 @@ function UpdateModelSizeVis() {
                 .transition()
                 .duration(500)
                 .attr("r", 5)
-                .attr("opacity", .75)
+                .attr("opacity", d => getOpacity(d.Model, selectedModels, 1))
                 .attr("stroke", "black")
                 .attr("fill", d => d.color)
+                .attr("class", "marker")
         },
         function (update) {
-            return update.transition(500).attr("cy", d => y(d.paramSize)).attr("cx", d => x(d.date))
+            return update
+                .transition(500)
+                .attr("cy", d => y(d.paramSize))
+                .attr("cx", d => x(d.date))
+                .attr("opacity", d => getOpacity(d.Model, selectedModels, 1))
+
         },
         function (exit) {
             return exit.transition().duration(300).attr("r", 0).remove()
         }
     )
 
+    let selectedData = data.filter(d => selectedModels.has(d.Model))
+    g.selectAll(".outline").data(selectedData).join(
+        function (enter) {
+            return enter.append("circle")
+                .attr("cy", d => y(d.paramSize))
+                .attr("cx", d => x(d.date))
+                .transition()
+                .duration(500)
+                .attr("r", 10)
+                .attr("stroke", d => d.color)
+                .attr("stroke-width", "2")
+                .attr("fill", "none")
+                .attr("class", "outline")
+        },
+        function (update) {
+            return update
+                .attr("stroke", d => d.color)
+                .transition(500)
+                .attr("cy", d => y(d.paramSize))
+                .attr("cx", d => x(d.date))
+        },
+        function (exit) {
+            return exit.remove()
+        }
+    )
+
+    g.selectAll(".name").data(selectedData).join(
+        function (enter) {
+            enter.append("text")
+                .attr("x", d => x(d.date))
+                .attr("y", d => y(d.paramSize))
+                .attr("text-anchor", "end ")
+                .style("font-size", "18px")
+                .style("font-weight", "bold")
+                .style("transform", "translate(-10px, -10px)")
+                .attr("fill", d => d.color)
+                .text(d => d.Model)
+                .attr("class", "name")
+                .style("text-shadow", "1px 1px 1px black")
+        },
+        function (update) {
+            return update
+                .text(d => d.Model)
+                .attr("fill", d => d.color)
+                .transition(500)
+                .attr("x", d => x(d.date))
+                .attr("y", d => y(d.paramSize))
+        },
+        function (exit) {
+            return exit.remove()
+        }
+    )
 }
 
 function InitModelSizeVis(data) {
@@ -147,6 +231,7 @@ function InitModelSizeVis(data) {
 
 
     const legend = svg.append("g").attr("class", "gLegend")
+
     let offset = 0;
     for (const modeltype of modelTypes) {
         const color = modelColors[modeltype]
@@ -292,8 +377,10 @@ function UpdateBenchmarkVis() {
 
 }
 
+
+
 function UpdateComputeVis() {
-    let computeEndYear = (timelineYear < computeStartYear ? computeStartYear + 5 : timelineYear)
+    let computeEndYear = (timelineYear < computeStartYear ? computeStartYear : timelineYear + 1)
     let data = computeData.filter(d => { return (d.date.getYear() + 1900) <= computeEndYear })
 
     const g = d3.select("#vis3").select("svg").select("g")
@@ -315,10 +402,8 @@ function UpdateComputeVis() {
     yAxis.transition()
         .call(yAxisUpdated)
 
-
     xAxis.transition()
         .call(xAxisUpdated)
-
 
     g.selectAll("circle").data(data).join(
         function (enter) {
@@ -341,22 +426,50 @@ function UpdateComputeVis() {
                 .attr("r", 10)
                 .attr("fill", "#69b3a2")
                 .attr("stroke", "black")
-                .attr("opacity",.75)
+                .attr("opacity", d => getOpacity(d.name, selectedComputes, .75))
                 .transition()
                 .duration(300)
                 .attr("cx", d => x(d.date))
                 .attr("cy", d => y(d.cost))
 
-                
         },
         function (update) {
             return update
                 .transition().duration(500)
                 .attr("cy", d => y(d.cost))
                 .attr("cx", d => x(d.date))
+                .attr("opacity", d => getOpacity(d.name, selectedComputes, .75))
         },
         function (exit) {
             return exit.transition().duration(300).attr("r", 0).remove()
+        }
+    )
+
+    let selectedData = data.filter(d => selectedComputes.has(d.name))
+    g.selectAll(".name").data(selectedData).join(
+        function (enter) {
+            enter.append("text")
+                .attr("x", d => x(d.date))
+                .attr("y", d => y(d.cost))
+                .attr("text-anchor", "middle")
+                .style("font-size", "18px")
+                .style("font-weight", "bold")
+                .style("transform", "translate(0, -15px)")
+                .attr("fill", "#69b3a2")
+                .text(d => d.name)
+                .attr("class", "name")
+                .style("text-shadow", "1px 1px 1px black")
+        },
+        function (update) {
+            return update
+                .text(d => d.name)
+                .transition()
+                .duration(500)
+                .attr("y", d => y(d.cost))
+                .attr("x", d => x(d.date))
+        },
+        function (exit) {
+            return exit.remove()
         }
     )
 }
