@@ -16,11 +16,14 @@
       },
       "text": {
         "headline": "Theseus the Maze-solving Mouse",
-        "text": "Claude Shannon builds an electromechanical mouse that learns to navigate a maze, illustrating machine learning concepts."
+        "text": "Theseus, developed by Claude Shannon in 1950, was an electromechanical mouse capable of navigating a maze, demonstrating early concepts of machine learning. The system used a magnetic sensor to detect paths and learned from mistakes, showcasing one of the first implementations of adaptive behavior in artificial intelligence."
       },
       "media": {
         "url": "https://upload.wikimedia.org/wikipedia/commons/7/70/Theseus_Maze_by_Claude_Shannon%2C_1952_-_MIT_Museum_-_DSC03702.JPG",
         "caption": "Claude Shannon's Theseus, a foundational experiment in AI."
+      },
+      "background": {
+        "url": "https://img.freepik.com/free-vector/classic-vintage-rays-sunburst-retro-background_1017-33769.jpg?semt=ais_hybrid&w=740"
       }
     },
     {
@@ -30,11 +33,14 @@
       },
       "text": {
         "headline": "Perceptron Mark I Algorithm",
-        "text": "Frank Rosenblatt invents the Perceptron, an early neural network model designed for pattern recognition."
+        "text": "Frank Rosenblatt developed the Perceptron, one of the earliest models of an artificial neural network. Designed for pattern recognition, it marked a foundational moment in AI by demonstrating how machines could learn from data through iterative adjustments. The Perceptron laid the groundwork for modern deep learning techniques."
       },
       "media": {
-        "url": "https://ids.si.edu/ids/deliveryService?id=NMAH-72-361&max=600",
-        "caption": "Frank Rosenblatt, creator of the Perceptron."
+        "url": "https://news.cornell.edu/sites/default/files/styles/full_size/public/2019-09/0925_rosenblatt5.jpg?itok=7UpHtbRj",
+        "caption": "Frank Rosenblatt adjusting the Perceptron."
+      },
+      "background": {
+        "url": "https://anatomiesofintelligence.github.io/img/p/perceptron-markI-diagram.png"
       }
     },
     {
@@ -45,11 +51,14 @@
       },
       "text": {
         "headline": "IBM's First Supercomputer: IBM 7030 Stretch",
-        "text": ""
+        "text": "The IBM 7030 Stretch was the world's fastest computer at the time, achieving groundbreaking performance for scientific computing. Though initially deemed a commercial failure, it introduced advanced architectural concepts like instruction pipelining and memory interleaving, which later became standard in modern computing."
       },
       "media": {
-        "url": "",
+        "url": "https://www.ibm.com/content/dam/connectedassets-adobe-cms/worldwide-content/arc/cf/ul/g/d4/fc/16834_stretch8.jpg/_jcr_content/renditions/cq5dam.medium.1584.1584.jpeg",
         "caption": ""
+      },
+      "background": {
+        "url": "https://wallpapercat.com/w/full/3/7/5/2113037-2560x1440-desktop-hd-ibm-background-photo.jpg"
       }
     },
     {
@@ -58,16 +67,17 @@
         "year": "1966"
       },
       "text": {
-        "headline": "ELIZA - Early Chatbot",
-        "text": "Joseph Weizenbaum develops ELIZA, one of the first chatbots, simulating conversation using pattern matching and scripted responses."
+        "headline": "The First Chatbot: ELIZA",
+        "text": "Developed by Joseph Weizenbaum at MIT, ELIZA was one of the first chatbots, designed to simulate conversation using pattern matching and scripted responses. ELIZA's most famous script, DOCTOR, mimicked a Rogerian psychotherapist, leading many users to believe they were conversing with a real human."
       },
       "media": {
         "url": "https://upload.wikimedia.org/wikipedia/commons/7/79/ELIZA_conversation.png",
         "caption": "ELIZA, a pioneering chatbot demonstrating natural language processing."
+      },
+      "background": {
+        "color": "#232729"
       }
     },
-
-    
     {
       "milestone_name": "Neocognitron",
       "start_date": {
@@ -84,7 +94,7 @@
     },
     {
       "milestone_name": "Cray X-MP",
-      "milestone_type":"compute",
+      "milestone_type": "compute",
       "start_date": {
         "year": "1983"
       },
@@ -140,7 +150,7 @@
       }
     },
     {
-      "milestone_type": "compute", 
+      "milestone_type": "compute",
       "milestone_name": "NASA Beowulf Cluster",
       "start_date": {
         "year": "1994"
@@ -183,18 +193,34 @@
       }
     },
     {
+      "milestone_name": "Hiero",
+      "start_date": {
+        "year": "2005"
+      },
+      "text": {
+        "headline": "Hiero: UMD's Machine Translation System",
+        "text": "Developed by researchers from the University of Maryland, Hiero is a statistical machine translation system that takes advatange of the hierarchical nature of lanaguage by using the unique approach of hierarchical phrase-based models to improve translation accuracy.  "
+      },
+      "background": {
+        "url": "https://wallpapers.com/images/hd/university-of-maryland-terrapin-shell-nefppid5p07m9nl3.jpg"
+      }
+    },
+    {
       "milestone_type": "compute",
       "milestone_name": "NVIDIA GeForce GTX 280",
       "start_date": {
         "year": "2008"
       },
       "text": {
-        "headline": "NVIDIA releases CUDA",
-        "text": "NVIDIA created CUDA, which introduced GPU computing. These innovations drastically increased the computational power of processing. Made Geforce GTX 280"
+        "headline": "NVIDIA and CUDA: The GPU Computing Revolution",
+        "text": "CUDA (Compute Unified Device Architecture) revolutionized parallel computing by enabling GPUs to perform general-purpose processing. Alongside CUDA, new lines of NVIDIA GPUs - like the GTX 280 - marked a drastic leap in performance, making GPU-accelerated computing accessible for scientific simulations, AI research, and high-performance applications."
       },
       "media": {
-        "url": "",
-        "caption": ""
+        "url": "https://tpucdn.com/gpu-specs/images/b/2251-front.small.jpg",
+        "caption": "The NVIDIA GeForce GTX 280, a large improvement in compute cost"
+      },
+      "background": {
+        "url": "https://wallpapercat.com/w/full/9/7/c/1255566-3840x2160-desktop-4k-nvidia-background-photo.jpg"
       }
     },
     {
@@ -204,7 +230,7 @@
       },
       "text": {
         "headline": "AlexNet Wins ImageNet",
-        "text": "AlexNet, a deep convolutional neural network, wins the ImageNet competition by a large margin using CUDA and NVIDIA gpus, demonstrating the power of deep learning. Used NVIDIA GPUs and Cuda for parallel GPU computations. Using convolutional neural networks and leveraging the computational power of GPUs, AlexNet demonstrated that machines could achieve superhuman performance in image classification when designed effectively"
+        "text": "AlexNet, a deep convolutional neural network, wins the ImageNet competition by a large margin, demonstrating the power of deep learning. Creators of AlexNet attributed a large part of their success in their use of parallel Nvidia GPUs to boost the computational power of their neural network."
       },
       "media": {
         "url": "https://miro.medium.com/v2/resize:fit:1400/0*xFY-719luaVR1wjY.png",

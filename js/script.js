@@ -41,7 +41,6 @@ async function populateSelectedMilestones() {
     if (json?.events == null) { return }
 
     for (const event of json.events) {
-        console.log(event)
         addSelectedMilestone(event)
     }
 }
@@ -62,17 +61,6 @@ timeline.on("change", (d) => {
 
     }
 })
-
-function addTitle(svg, title) {
-    svg.append("text")
-        .attr("x", width / 2 + margin.left)
-        .attr("y", margin.top / 3)
-        .attr("text-anchor", "middle")
-        .style("font-size", "24px")
-        .style("font-weight", "bold")
-        .style("fill", "#333")
-        .text(title);
-}
 
 
 function getOpacity(name, selected, defaultOpacity) {
@@ -187,22 +175,25 @@ function UpdateModelSizeVis() {
         function (update) {
             return update
                 .attr("stroke", d => d.color)
-                .transition(500)
+
+                .transition()
+                .duration(250)
                 .attr("cy", d => y(d.paramSize))
                 .attr("cx", d => x(d.date))
+
         },
         function (exit) {
-            return exit.remove()
+            return exit.transition().duration(500).attr("r", 0).remove()
         }
     )
 
     g.selectAll(".name").data(selectedData).join(
         function (enter) {
-            enter.append("text")
+            return enter.append("text")
                 .attr("x", d => x(d.date))
                 .attr("y", d => y(d.paramSize))
                 .attr("text-anchor", "end ")
-                .style("font-size", "18px")
+                .style("font-size", "15px")
                 .style("font-weight", "bold")
                 .style("transform", "translate(-10px, -10px)")
                 .attr("fill", d => d.color)
@@ -232,7 +223,6 @@ function InitModelSizeVis(data) {
         .attr("height", height + margin.top + margin.bottom)
 
 
-    addTitle(svg, "AI Training Parameter Size Over Time");
     const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
 
     // Axis labels
@@ -274,7 +264,6 @@ function InitBenchmarkVis() {
         .attr("height", height + margin.top + margin.bottom)
     const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
 
-    addTitle(svg, "AI Benchmark Performance Over Time")
 
     // Axis labels
     svg.append("text")
@@ -315,7 +304,7 @@ function InitBenchmarkVis() {
         .attr('fill', 'none');
 
     svg.append("text")
-        .attr("transform", `translate(${margin.left + width / 1.8},${height / 4 + margin.top / 5})`)
+        .attr("transform", `translate(${margin.left + width / 1.7},${height / 4 + margin.top / 5})`)
         .style("text-anchor", "end")
         .text("Human Benchmark Performance")
         .attr("opacity", .5)
@@ -444,6 +433,7 @@ function UpdateComputeVis() {
                     } else {
                         selectedComputes.add(d.name)
                     }
+                    UpdateComputeVis()
                 })
                 .on("mouseover", function (event, d) {
                     if (d) {
@@ -459,14 +449,15 @@ function UpdateComputeVis() {
                     d3.select(this).attr("r", 10)
                     tooltip.transition().duration(300).style("opacity", 0);
                 })
+                .attr("cx", d => x(d.date))
+                .attr("cy", d => y(d.cost))
+                .transition()
+                .duration(300)
                 .attr("r", 10)
                 .attr("fill", "#69b3a2")
                 .attr("stroke", "black")
                 .attr("opacity", d => getOpacity(d.name, selectedComputes, .75))
-                .transition()
-                .duration(300)
-                .attr("cx", d => x(d.date))
-                .attr("cy", d => y(d.cost))
+
 
         },
         function (update) {
@@ -484,11 +475,11 @@ function UpdateComputeVis() {
     let selectedData = data.filter(d => selectedComputes.has(d.name))
     g.selectAll(".name").data(selectedData).join(
         function (enter) {
-            enter.append("text")
+            return enter.append("text")
                 .attr("x", d => x(d.date))
                 .attr("y", d => y(d.cost))
                 .attr("text-anchor", "middle")
-                .style("font-size", "18px")
+                .style("font-size", "15px")
                 .style("font-weight", "bold")
                 .style("transform", "translate(0, -15px)")
                 .attr("fill", "#69b3a2")
@@ -517,7 +508,6 @@ function InitComputeVis() {
         .attr("height", height + margin.top + margin.bottom)
     const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
 
-    addTitle(svg, "U.S. Dollars Per Compute Over Time")
 
     // Axis labels
     svg.append("text")
