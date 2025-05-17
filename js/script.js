@@ -148,6 +148,7 @@ function UpdateModelSizeVis() {
         function (update) {
             return update
                 .transition(500)
+                .attr("r", 5)
                 .attr("cy", d => y(d.paramSize))
                 .attr("cx", d => x(d.date))
                 .attr("opacity", d => getOpacity(d.Model, selectedModels, 1))
@@ -167,20 +168,20 @@ function UpdateModelSizeVis() {
                 .transition()
                 .duration(500)
                 .attr("r", 10)
-                .attr("stroke", d => d.color)
                 .attr("stroke-width", "2")
+                .attr("stroke", d => d.color)
                 .attr("fill", "none")
                 .attr("class", "outline")
         },
         function (update) {
             return update
-                .attr("stroke", d => d.color)
-
                 .transition()
                 .duration(250)
                 .attr("cy", d => y(d.paramSize))
                 .attr("cx", d => x(d.date))
-
+                .attr("stroke-width", "2")
+                .attr("stroke", d => d.color)
+                .attr("r", 10)
         },
         function (exit) {
             return exit.transition().duration(500).attr("r", 0).remove()
@@ -465,6 +466,7 @@ function UpdateComputeVis() {
                 .transition().duration(500)
                 .attr("cy", d => y(d.cost))
                 .attr("cx", d => x(d.date))
+                .attr("r", 10)
                 .attr("opacity", d => getOpacity(d.name, selectedComputes, .75))
         },
         function (exit) {
@@ -491,7 +493,8 @@ function UpdateComputeVis() {
             return update
                 .text(d => d.name)
                 .transition()
-                .duration(500)
+                .duration(500
+                )
                 .attr("y", d => y(d.cost))
                 .attr("x", d => x(d.date))
         },

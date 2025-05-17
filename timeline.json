@@ -85,11 +85,11 @@
       },
       "text": {
         "headline": "Neocognitron: Japanese Handwriting Recognition",
-        "text": ""
+        "text": "The Neocognitron, developed by Japanese computer scientist Kunihiko Fukushima, was a pioneering neural network model designed for visual pattern recognition. It introduced hierarchical layers to process visual information and was particularly successful in recognizing handwritten Japanese characters. This innovation laid the groundwork for modern convolutional neural networks used in image and text analysis."
       },
       "media": {
-        "url": "",
-        "caption": ""
+        "url": "https://miro.medium.com/v2/resize:fit:1400/0*qq8NM5pgElCjVJBK.png",
+        "caption": "Diagram showcasing the architecture of the Neocognitron"
       }
     },
     {
@@ -99,12 +99,12 @@
         "year": "1983"
       },
       "text": {
-        "headline": "Cray X-MP: First Supercompute to process 1 GFLOP",
-        "text": ""
+        "headline": "Cray X-MP: Breaking the 1 GFLOP Barrier",
+        "text": "  The Cray X-MP, introduced in 1982, was the first supercomputer to break the 1 GFLOP/s barrier (one billion floating-point operations per second). This achievement marked a major milestone in computing power, demonstrating the rapid advancements in hardware that would continue to shape AI and data processing technologies."
       },
       "media": {
-        "url": "https://i0.wp.com/cray-history.net/wp-content/uploads/2021/08/X-MP-Brochure-ver-2.jpg?ssl=1",
-        "caption": ""
+        "url": "https://images.fineartamerica.com/images-medium-large-5/cray-x-mp48-supercomputer-jerry-masonscience-photo-library.jpg",
+        "caption": "The processor of the Cray X-MP supercomputer, installed at the Atlas Centre of the Rutherford Appleton Laboratory, Oxfordshire, U.K"
       }
     },
     {
@@ -114,11 +114,14 @@
       },
       "text": {
         "headline": "Back Propagation",
-        "text": ""
+        "text": "Popularized by the 1986 white paper by Rumelhart, Hinton, and Williams, backpropagation became a fundamental algorithm for training artificial neural networks that took the concept of the Perceptron to the next level. By efficiently calculating gradients, it enabled multi-layer networks to learn from data, paving the way for modern deep learning techniques."
       },
       "media": {
-        "url": "",
-        "caption": ""
+        "url": "https://miro.medium.com/v2/resize:fit:1080/0*d9yJ5xIqdbDyjCYR.gif",
+        "caption": "Animation showcasing the flow of data during backpropagation in a neural network"
+      },
+      "background": {
+        "color": "black"
       }
     },
     {
@@ -128,11 +131,14 @@
       },
       "text": {
         "headline": "TD-Gammon",
-        "text": "Gerald Tesauro develops TD-Gammon, a backgammon-playing AI using reinforcement learning, achieving near-expert play."
+        "text": "Developed by IBM researcher Gerald Tesauro, TD-Gammon was the first AI to achieve expert-level play in backgammon using reinforcement learning and self-play, without being programmed with human strategies. It marked the start of modern machine learning being applied to games, paving the way for later breakthroughs like AlphaGo."
       },
       "media": {
         "url": "https://achievements.ai/wp-content/uploads/2021/01/td-gammon-program-developed-by-gerald-tesauro-1.jpg",
-        "caption": "TD-Gammon, one of the first successful uses of reinforcement learning."
+        "caption": "TD-Gammon, one of the first successful uses of reinforcement learning applied to games."
+      },
+      "background": {
+        "url": "https://media.istockphoto.com/id/170618222/photo/backgammon-board-background.jpg?s=612x612&w=0&k=20&c=zVquSTv7Ch4UzSJzGrhA09FfNh2hLNIKkq4fQrvZcxo="
       }
     },
     {
@@ -142,11 +148,14 @@
       },
       "text": {
         "headline": "Support Vector Machines",
-        "text": ""
+        "text": "Introduced as a powerful method for classification, SVMs use geometry to find the optimal boundary between classes. They became a key tool in early machine learning, widely used in text classification, image recognition, and bioinformatics before the deep learning era."
       },
       "media": {
-        "url": "",
-        "caption": ""
+        "url": "https://miro.medium.com/max/333/0*aiT6AJL16jgGmjh_.gif",
+        "caption": "Animation showcasing the Support Vector Machine algorithm"
+      },
+      "background": {
+        "color": "black"
       }
     },
     {
@@ -156,12 +165,15 @@
         "year": "1994"
       },
       "text": {
-        "headline": "NASA Beowulf Project",
-        "text": "NASA introduced the beowulf project as an alternative to supercomputers. Basic idea is that you have a cluster of processors that run in parallel."
+        "headline": "NASA's Beowulf Cluster",
+        "text": "NASA develops the Beowulf cluster, a low-cost supercomputing architecture built from off-the-shelf PCs. It revolutionized high-performance computing by making parallel processing more accessible, laying the groundwork for modern compute infrastructure used in AI research today."
       },
       "media": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Beowulf.jpg",
-        "caption": ""
+        "url": "https://www.spacefoundation.org/wp-content/uploads/2022/08/Beowolf2.jpg",
+        "caption": "Beowulf Cluster installment at the NASA Goddard Space Flight Center"
+      },
+      "background": {
+        "url": "https://i.ytimg.com/vi/p4YdZiTMPUc/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AH-CYAC0AWKAgwIABABGBMgMCh_MA8=&rs=AOn4CLDld2kLIKyvd74GudtuEUaL_wDJxA"
       }
     },
     {
@@ -171,11 +183,14 @@
       },
       "text": {
         "headline": "Deep Blue Defeats Kasparov",
-        "text": "IBM's Deep Blue defeats world chess champion Garry Kasparov, showcasing brute-force search and evaluation strategies."
+        "text": "IBM's Deep Blue becomes the first computer to defeat reigning world chess champion Garry Kasparov in a match. This landmark victory showcased the power of brute-force search and specialized hardware in AI, capturing global attention."
       },
       "media": {
         "url": "https://cdn.theatlantic.com/media/mt/science/kasparov615.jpg",
         "caption": "Deep Blue's victory marked a milestone in game-playing AI."
+      },
+      "background": {
+        "url": "https://png.pngtree.com/thumb_back/fh260/background/20230610/pngtree-black-and-white-chess-pieces-in-a-hall-image_2918699.jpg"
       }
     },
     {
@@ -185,11 +200,14 @@
       },
       "text": {
         "headline": "LeNet-5",
-        "text": ""
+        "text": " LeNet-5 was a breakthrough AI model that taught computers to recognize handwritten digits with impressive accuracy. By automatically learning important features from images, it improved the way machines understand visual information and helped pave the way for more advanced AI in image recognition."
       },
       "media": {
-        "url": "",
-        "caption": ""
+        "url": "https://vitalab.github.io/article/images/lenet/a384.gif",
+        "caption": "A LeNet-5 Demo on a batch of handwritten digits"
+      },
+      "background": {
+        "color": "#399ABB"
       }
     },
     {
@@ -213,7 +231,7 @@
       },
       "text": {
         "headline": "NVIDIA and CUDA: The GPU Computing Revolution",
-        "text": "CUDA (Compute Unified Device Architecture) revolutionized parallel computing by enabling GPUs to perform general-purpose processing. Alongside CUDA, new lines of NVIDIA GPUs - like the GTX 280 - marked a drastic leap in performance, making GPU-accelerated computing accessible for scientific simulations, AI research, and high-performance applications."
+        "text": "NVIDIA released CUDA (Compute Unified Device Architecture) which revolutionized parallel computing by enabling GPUs to perform general-purpose processing. Alongside CUDA, new lines of NVIDIA GPUs - like the GTX 280 - marked a drastic leap in performance, making GPU-accelerated computing accessible for scientific simulations, AI research, and high-performance applications."
       },
       "media": {
         "url": "https://tpucdn.com/gpu-specs/images/b/2251-front.small.jpg",
