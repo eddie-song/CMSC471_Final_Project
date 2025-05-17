@@ -66,7 +66,7 @@ timeline.on("change", (d) => {
 function addTitle(svg, title) {
     svg.append("text")
         .attr("x", width / 2 + margin.left)
-        .attr("y", margin.top / 2)
+        .attr("y", margin.top / 3)
         .attr("text-anchor", "middle")
         .style("font-size", "24px")
         .style("font-weight", "bold")
@@ -539,7 +539,7 @@ function InitComputeVis() {
     UpdateComputeVis()
 }
 
-d3.csv("data2/dollars_per_compute.csv").then(data => {
+d3.csv("data/dollars_per_compute.csv").then(data => {
     data.forEach(d => {
         d.cost = +d.GFLOPCost;
         d.date = new Date(d.Day)
@@ -551,7 +551,7 @@ d3.csv("data2/dollars_per_compute.csv").then(data => {
     InitComputeVis()
 })
 
-d3.csv("data2/ai_benchmark_progress.csv").then(data => {
+d3.csv("data/ai_benchmark_progress.csv").then(data => {
     const parsedData = []
 
     data.forEach(d => {
@@ -569,7 +569,7 @@ d3.csv("data2/ai_benchmark_progress.csv").then(data => {
     InitBenchmarkVis()
 })
 
-d3.csv("data2/notable_ai_models.csv").then(data => {
+d3.csv("data/notable_ai_models.csv").then(data => {
 
     data.forEach(d => {
         let domains = d.Domain.split(",")

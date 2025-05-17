@@ -146,7 +146,7 @@
         "year": "1997"
       },
       "text": {
-        "headline": "NASA HPC: The Beowulf Project",
+        "headline": "NASA Beowulf Project",
         "text": "NASA introduced the beowulf project as an alternative to supercomputers. Basic idea is that you have a cluster of processors that run in parallel."
       },
       "media": {
