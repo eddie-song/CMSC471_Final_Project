@@ -1,6 +1,6 @@
 const margin = { top: 50, right: 200, bottom: 100, left: 80 };
-const width = 800 - margin.left - margin.right;
-const height = 700 - margin.top - margin.bottom;
+const width = 680 - margin.left - margin.right;
+const height = 600 - margin.top - margin.bottom;
 const tooltip = d3.select("#tooltip");
 
 
@@ -315,10 +315,11 @@ function InitBenchmarkVis() {
         .attr('fill', 'none');
 
     svg.append("text")
-        .attr("transform", `translate(${margin.left + width / 3.3},${height / 4 + margin.top / 5})`)
-        .style("text-anchor", "middle")
-        .text("Human Benchmark Performance (set to zero)")
+        .attr("transform", `translate(${margin.left + width / 1.8},${height / 4 + margin.top / 5})`)
+        .style("text-anchor", "end")
+        .text("Human Benchmark Performance")
         .attr("opacity", .5)
+        .attr("font-weight", "bold")
         .style("font-size", 14)
 
     UpdateBenchmarkVis()
@@ -377,8 +378,8 @@ function UpdateBenchmarkVis() {
         },
         function (update) {
             return update
-                .transition().duration(500).attr("cy", d => y(d.score))
                 .attr("cx", d => x(d.date))
+                .attr("cy", d => y(d.score))
         },
 
         function (exit) {
@@ -390,10 +391,13 @@ function UpdateBenchmarkVis() {
     const line = d3.line((d) => x(d.date), (d) => y(d.score))
     g.select(".gLines").selectAll("path").data(benchmarkTasks).join(
         enter => {
-            return enter.append("path").transition().duration(500).attr("d", task => line(data.filter(d => d.task == task))).attr("fill", "none").attr("stroke", task => benchmarkColors[task])
+            return enter.append("path")
+                .attr("d", task => line(data.filter(d => d.task == task)))
+                .attr("fill", "none")
+                .attr("stroke", task => benchmarkColors[task])
         },
         update => {
-            return update.transition().duration(500).attr("d", task => line(data.filter(d => d.task == task)))
+            return update.attr("d", task => line(data.filter(d => d.task == task)))
         },
         exit => {
             return exit.remove()
@@ -404,9 +408,8 @@ function UpdateBenchmarkVis() {
 
 
 
-// computeXFormat = () => {d3.format(".2s") }
 function UpdateComputeVis() {
-    let computeEndYear = (timelineYear < computeStartYear ? computeStartYear : timelineYear )
+    let computeEndYear = (timelineYear < computeStartYear ? computeStartYear : timelineYear)
     let data = computeData.filter(d => { return (d.date.getYear() + 1900) <= computeEndYear })
 
     const g = d3.select("#vis3").select("svg").select("g")
