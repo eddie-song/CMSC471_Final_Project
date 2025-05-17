@@ -32,7 +32,7 @@
         "year": "1957"
       },
       "text": {
-        "headline": "Perceptron Mark I Algorithm",
+        "headline": "Perceptron Mark I",
         "text": "Frank Rosenblatt developed the Perceptron, one of the earliest models of an artificial neural network. Designed for pattern recognition, it marked a foundational moment in AI by demonstrating how machines could learn from data through iterative adjustments. The Perceptron laid the groundwork for modern deep learning techniques."
       },
       "media": {
@@ -105,6 +105,9 @@
       "media": {
         "url": "https://images.fineartamerica.com/images-medium-large-5/cray-x-mp48-supercomputer-jerry-masonscience-photo-library.jpg",
         "caption": "The processor of the Cray X-MP supercomputer, installed at the Atlas Centre of the Rutherford Appleton Laboratory, Oxfordshire, U.K"
+      }, 
+      "background": {
+        "color": "black"
       }
     },
     {
@@ -267,6 +270,24 @@
       "media": {
         "url": "https://i.redd.it/zmwmm6lx05cb1.jpg",
         "caption": "AlphaGo marked a significant advance in AI game playing."
+      }
+    },
+    {
+      "milestone_type": "compute",
+      "milestone_name": "NVIDIA Tesla V100",
+      "start_date": {
+        "year": "2017"
+      },
+      "text": {
+        "headline": "NVIDIA Tesla V100 & Tensor Cores",
+        "text": "The Tesla V100 introduced Tensor Cores - specialized hardware units designed to accelerate matrix multiplication and accumulate operations, which is extremely useful for Machine Learning. It's the world's first GPU to break the 100 teraflops (TFLOPS) barrier of deep learning performance, delivering massive improvements in training and inference speed for AI models and making it a cornerstone in data centers, cloud platforms, and research institutions."
+      },
+      "media": {
+        "url": "https://images.contentstack.io/v3/assets/blt71da4c740e00faaa/blt20563cbe49c355d2/5eea631c5f3aa42c4669df22/V100-Specs.jpg",
+        "caption": ""
+      },
+      "background": {
+        "color": "black"
       }
     },
     {
