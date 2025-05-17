@@ -406,7 +406,7 @@ function UpdateBenchmarkVis() {
 
 // computeXFormat = () => {d3.format(".2s") }
 function UpdateComputeVis() {
-    let computeEndYear = (timelineYear < computeStartYear ? computeStartYear : timelineYear + 1)
+    let computeEndYear = (timelineYear < computeStartYear ? computeStartYear : timelineYear )
     let data = computeData.filter(d => { return (d.date.getYear() + 1900) <= computeEndYear })
 
     const g = d3.select("#vis3").select("svg").select("g")
