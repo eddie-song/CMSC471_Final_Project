@@ -2,12 +2,113 @@
   "title": {
     "text": {
       "headline": "AI Through the Ages",
-      "text": "Group 20: Senthoor Krishnaraju, Edward Song, Pranav Hedge"
+      "text": "Group 20: Senthoor Krishnaraju, Edward Song, Pranav Hegde"
     },
     "background": {
       "url": "https://media.istockphoto.com/id/1470617656/vector/ai-artificial-intelligence-chipset-on-circuit-board-in-futuristic-concept-suitable-for.jpg?s=612x612&w=0&k=20&c=_wC-pphyNI2muaUHG4N9JuYXxJEMDuzx56Dvzr8ZDUk="
     }
   },
+  "eras": [
+  {
+    "start_date": {
+      "year": "1943"
+    },
+    "end_date": {
+      "year": "1950"
+    },
+    "text": {
+      "headline": "Foundations of AI"
+    }
+  },
+  {
+    "start_date": {
+      "year": "1950"
+    },
+    "end_date": {
+      "year": "1974"
+    },
+    "text": {
+      "headline": "Symbolic AI Era"
+    }
+  },
+  {
+    "start_date": {
+      "year": "1974"
+    },
+    "end_date": {
+      "year": "1980"
+    },
+    "text": {
+      "headline": "First AI Winter"
+    }
+  },
+  {
+    "start_date": {
+      "year": "1980"
+    },
+    "end_date": {
+      "year": "1987"
+    },
+    "text": {
+      "headline": "Expert Systems Boom"
+    }
+  },
+  {
+    "start_date": {
+      "year": "1987"
+    },
+    "end_date": {
+      "year": "1993"
+    },
+    "text": {
+      "headline": "Second AI Winter"
+    }
+  },
+  {
+    "start_date": {
+      "year": "1993"
+    },
+    "end_date": {
+      "year": "2012"
+    },
+    "text": {
+      "headline": "Statistical Learning Era"
+    }
+  },
+  {
+    "start_date": {
+      "year": "2012"
+    },
+    "end_date": {
+      "year": "2017"
+    },
+    "text": {
+      "headline": "Deep Learning Revolution"
+    }
+  },
+  {
+    "start_date": {
+      "year": "2017"
+    },
+    "end_date": {
+      "year": "2023"
+    },
+    "text": {
+      "headline": "Transformer & Foundation Model Era"
+    }
+  },
+  {
+    "start_date": {
+      "year": "2023"
+    },
+    "end_date": {
+      "year": "2025"
+    },
+    "text": {
+      "headline": "Agentic & Multimodal AI Era"
+    }
+  }
+],
   "events": [
     {
       "milestone_name": "Theseus",
