@@ -1,288 +1,602 @@
-const margin = { top: 50, right: 200, bottom: 175, left: 80 };
-const width = 1400 - margin.left - margin.right;
-const height = 800 - margin.top - margin.bottom;
+const margin = { top: 50, right: 200, bottom: 100, left: 80 };
+const width = 1200 - margin.left - margin.right;
+const height = 600 - margin.top - margin.bottom;
+const tooltip = d3.select("#tooltip");
 
-const companyMapping = {
-    "claude": ["claude-2.0", "claude-2.1", "claude-3-haiku", "claude-3-opus", "claude-3-sonnet", "claude-3.5", "claude-3.7"],
-    "openai": ["gpt-3.5", "gpt-4", "gpt-4.5", "gpt-4.1"],
-    "anthropic": ["claude"],
-    "google": ["gemini", "gemma"],
-    "meta": ["llama"],
-    "mistral": ["mistral", "mixtral"],
-    "xai": ["grok"],
-    "qwen": ["qwen"],
-    "deepseek": ["deepseek"],
-    "all": []
-};
-
-const dropdownContainer = d3.select("#vis")
-    .insert("div", ":first-child")
-    .style("margin-bottom", "20px")
-    .style("display", "flex")
-    .style("gap", "20px")
-    .style("align-items", "center");
-
-const companyDropdownDiv = dropdownContainer.append("div")
-    .style("display", "flex")
-    .style("align-items", "center");
-
-companyDropdownDiv.append("label")
-    .attr("for", "companySelect")
-    .text("Select Company: ")
-    .style("margin-right", "10px");
-
-const companyDropdown = companyDropdownDiv.append("select")
-    .attr("id", "companySelect")
-    .style("padding", "5px")
-    .style("font-size", "14px");
-
-companyDropdown.selectAll("option")
-    .data(["all", ...Object.keys(companyMapping)])
-    .enter()
-    .append("option")
-    .text(d => d.charAt(0).toUpperCase() + d.slice(1))
-    .attr("value", d => d);
-
-const modelDropdownDiv = dropdownContainer.append("div")
-    .style("display", "flex")
-    .style("align-items", "center");
-
-modelDropdownDiv.append("label")
-    .attr("for", "modelSelect")
-    .text("Select Model: ")
-    .style("margin-right", "10px");
-
-const modelDropdown = modelDropdownDiv.append("select")
-    .attr("id", "modelSelect")
-    .style("padding", "5px")
-    .style("font-size", "14px");
-
-const svg = d3.select("#vis")
-    .append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
-    .append("g")
-    .attr("transform", `translate(${margin.left},${margin.top})`);
-
-const tasks = ["GPQA diamond", "MATH level 5", "OTIS Mock AIME 2024-2025", "FrontierMath-2025-02-28-Public", "FrontierMath-2025-02-28-Private", "SWE-Bench verified"];
-
-const taskDescriptions = {
-    "GPQA diamond": "General Programming Quality Assessment - Tests model's ability to solve general programming problems",
-    "MATH level 5": "Advanced Mathematics Problems - Tests mathematical reasoning and problem-solving at a high school/early college level",
-    "OTIS Mock AIME 2024-2025": "American Invitational Mathematics Examination Practice - Tests advanced mathematical problem-solving skills",
-    "FrontierMath-2025-02-28-Public": "Public Dataset of Frontier Mathematics Problems - Tests cutting-edge mathematical reasoning",
-    "FrontierMath-2025-02-28-Private": "Private Dataset of Frontier Mathematics Problems - Additional challenging mathematics problems",
-    "SWE-Bench verified": "Software Engineering Benchmark - Tests practical software development and coding abilities"
-};
-
-const scoreDescription = `
-Score Scale (0-1):
-• 0.0 = No correct answers
-• 0.5 = Half of answers correct
-• 1.0 = All answers correct
-
-The score represents the model's accuracy in solving problems for each task. Higher scores indicate better performance.
-`;
-
-const taskColors = d3.scaleOrdinal()
-    .domain(tasks)
-    .range(d3.schemeCategory10);
-
-const xScale = d3.scalePoint()
-    .domain(tasks)
-    .range([0, width])
-    .padding(0.5);
-
-const yScale = d3.scaleLinear()
-    .domain([0, 1])
-    .range([height, 0]);
-
-const xAxis = d3.axisBottom(xScale)
-    .tickSize(-height);
-
-const yAxis = d3.axisLeft(yScale)
-    .tickSize(-width)
-    .tickFormat(d3.format(".1f"));
-
-svg.append("g")
-    .attr("class", "x-axis")
-    .attr("transform", `translate(0,${height})`)
-    .call(xAxis)
-    .selectAll("text")
-    .attr("transform", "rotate(-45)")
-    .style("text-anchor", "end")
-    .style("font-size", "14px")
-    .style("cursor", "help")
-    .on("mouseover", function(event, d) {
-        const tooltip = d3.select("#tooltip");
-        tooltip.style("display", "block")
-            .html(`<strong>${d}</strong><br>${taskDescriptions[d]}`)
-            .style("left", (event.pageX + 10) + "px")
-            .style("top", (event.pageY - 10) + "px");
-    })
-    .on("mouseout", function() {
-        d3.select("#tooltip").style("display", "none");
-    });
-
-const yAxisGroup = svg.append("g")
-    .attr("class", "y-axis")
-    .call(yAxis);
-
-yAxisGroup.selectAll("text")
-    .style("font-size", "14px");
-
-const yAxisLabel = svg.append("text")
-    .attr("transform", "rotate(-90)")
-    .attr("y", -margin.left + 20)
-    .attr("x", -height / 2)
-    .attr("dy", "1em")
-    .style("text-anchor", "middle")
-    .style("font-size", "16px")
-    .style("cursor", "help")
-    .text("Score")
-    .on("mouseover", function(event) {
-        const tooltip = d3.select("#tooltip");
-        tooltip.style("display", "block")
-            .html(`<strong>Performance Score</strong><br>${scoreDescription}`)
-            .style("left", (event.pageX + 10) + "px")
-            .style("top", (event.pageY - 10) + "px");
-    })
-    .on("mouseout", function() {
-        d3.select("#tooltip").style("display", "none");
-    });
-
-yAxisGroup.selectAll(".tick")
-    .style("cursor", "help")
-    .on("mouseover", function(event) {
-        const tooltip = d3.select("#tooltip");
-        tooltip.style("display", "block")
-            .html(`<strong>Performance Score</strong><br>${scoreDescription}`)
-            .style("left", (event.pageX + 10) + "px")
-            .style("top", (event.pageY - 10) + "px");
-    })
-    .on("mouseout", function() {
-        d3.select("#tooltip").style("display", "none");
-    });
-
-const line = d3.line()
-    .x(d => xScale(d.task))
-    .y(d => yScale(d.score))
-    .defined(d => !isNaN(d.score));
-
-function isModelFromCompany(modelName, company) {
-    if (company === "all") return true;
-    return companyMapping[company].some(prefix => modelName.toLowerCase().startsWith(prefix.toLowerCase()));
+// Make functions globally accessible
+window.showMetricsPopup = function() {
+    document.getElementById('metrics-popup').style.display = 'block';
+    document.getElementById('overlay').style.display = 'block';
 }
 
-function updateModelDropdown(data, selectedCompany) {
-    const models = [...data.keys()].filter(model => isModelFromCompany(model, selectedCompany));
-    
-    models.unshift("all");
-
-    const modelOptions = modelDropdown.selectAll("option")
-        .data(models);
-
-    modelOptions.exit().remove();
-
-    modelOptions.enter()
-        .append("option")
-        .merge(modelOptions)
-        .text(d => d === "all" ? "All Models" : d)
-        .attr("value", d => d);
-
-    modelDropdown.property("value", "all");
+window.closeMetricsPopup = function() {
+    document.getElementById('metrics-popup').style.display = 'none';
+    document.getElementById('overlay').style.display = 'none';
 }
 
-function shouldShowModel(model, selectedCompany, selectedModel) {
-    if (selectedModel === "all") {
-        return isModelFromCompany(model, selectedCompany);
-    }
-    return model === selectedModel;
-}
+let computeData = []
+let modelSizeData = []
+let benchmarkData = []
+let benchmarkTasks = ["Handwriting recognition", "Image recognition", "Language understanding", "Predictive reasoning", "Reading comprehension"]
+let modelTypes = ["Biology", "Games", "Image generation", "Language", "Multiple domains", "Other", "Robotics", "Speech", "Vision"]
+let modelColors = modelTypes.reduce((a, d, i) => { return { ...a, [d]: d3.schemeCategory10[i] } }, {})
+let benchmarkColors = benchmarkTasks.reduce((a, d, i) => { return { ...a, [d]: d3.schemeCategory10[i] } }, {})
 
-function updateVisualization(data, selectedCompany, selectedModel = "all") {
-    svg.selectAll(".model-line").remove();
-    svg.selectAll("circle").remove();
+let selectedModels = new Set();
+let selectedComputes = new Set();
 
-    const filteredData = new Map([...data].filter(([model]) => 
-        shouldShowModel(model, selectedCompany, selectedModel)
-    ));
+let timelineYear = 1949
+const computeStartYear = 1959
+const modelSizeStartYear = 1950
+const benchmarkStartYear = 1997
 
-    filteredData.forEach((points, model) => {
-        const validPoints = points
-            .map(d => ({
-                task: d.task,
-                score: parseFloat(d["Best score (across scorers)"])
-            }))
-            .filter(d => !isNaN(d.score) && tasks.includes(d.task))
-            .sort((a, b) => tasks.indexOf(a.task) - tasks.indexOf(b.task));
 
-        if (validPoints.length > 1) {
-            svg.append("path")
-                .datum(validPoints)
-                .attr("class", "model-line")
-                .attr("d", line)
-                .style("fill", "none")
-                .style("stroke", d => taskColors(d[0].task))
-                .style("opacity", 0.3)
-                .on("mouseover", function() {
-                    d3.select(this)
-                        .style("opacity", 1)
-                        .style("stroke-width", 3);
-                    
-                    const tooltip = d3.select("#tooltip");
-                    tooltip.style("display", "block")
-                        .html(`<strong>Model: ${model}</strong><br>` +
-                              validPoints.map(p => `${p.task}: ${p.score.toFixed(3)}`).join("<br>"));
-                })
-                .on("mousemove", function(event) {
-                    const tooltip = d3.select("#tooltip");
-                    tooltip.style("left", (event.pageX + 10) + "px")
-                        .style("top", (event.pageY - 10) + "px");
-                })
-                .on("mouseout", function() {
-                    d3.select(this)
-                        .style("opacity", 0.3)
-                        .style("stroke-width", 1);
-                    d3.select("#tooltip").style("display", "none");
-                });
 
-            svg.selectAll(null)
-                .data(validPoints)
-                .enter()
-                .append("circle")
-                .attr("cx", d => xScale(d.task))
-                .attr("cy", d => yScale(d.score))
-                .attr("r", 4)
-                .style("fill", d => taskColors(d.task))
-                .style("opacity", 0.6);
+function addSelectedMilestone(milestone) {
+    const name = milestone?.milestone_name;
+    const milestoneType = milestone?.milestone_type == null ? "model" : milestone?.milestone_type;
+    if (name != null) {
+        if (milestoneType == "compute") {
+            selectedComputes.add(name)
+        } else if (milestoneType == "model") {
+            selectedModels.add(name)
         }
-    });
+    }
+
 }
 
-d3.csv("data/benchmarks_runs.csv").then(rawData => {
-    const modelData = d3.group(rawData, d => d.model);
-    
-    updateModelDropdown(modelData, "all");
+async function populateSelectedMilestones() {
+    const res = await fetch("./timeline.json")
+    const json = await res.json()
+    if (json?.events == null) { return }
 
-    companyDropdown.on("change", function() {
-        const selectedCompany = this.value;
-        updateModelDropdown(modelData, selectedCompany);
-        updateVisualization(modelData, selectedCompany, "all");
-    });
+    for (const event of json.events) {
+        addSelectedMilestone(event)
+    }
+}
 
-    modelDropdown.on("change", function() {
-        const selectedCompany = companyDropdown.property("value");
-        const selectedModel = this.value;
-        updateVisualization(modelData, selectedCompany, selectedModel);
-    });
 
-    updateVisualization(modelData, "all", "all");
+populateSelectedMilestones();
+let timeline = new TL.Timeline('timeline-embed', 'timeline.json');
+
+
+timeline.on("change", (d) => {
+    const event = timeline.getDataById(d?.unique_id)
+    const endYear = event?.start_date?.data?.year
+    if (endYear != null) {
+        timelineYear = parseInt(endYear)
+        UpdateModelSizeVis()
+        UpdateBenchmarkVis()
+        UpdateComputeVis()
+
+        // Show metrics button when reaching GPT-4
+        if (event?.text?.headline === "GPT-4 Released") {
+            document.getElementById('metrics-button').style.display = 'block';
+        } else {
+            document.getElementById('metrics-button').style.display = 'none';
+        }
+    }
+})
+
+function getOpacity(name, selected, defaultOpacity) {
+
+    if (selected.size == 0 || selected.has(name)) {
+        return defaultOpacity
+    }
+
+    return .1
+}
+
+const GraphYAxisFormat = (y) => {
+    if (y < .0001) {
+        return d3.format(".2e")(y)
+    }
+    if (y < 10) {
+        return d3.format(".3f")(y)
+    }
+
+    if (y < 1000000) {
+        return d3.format(",")(y)
+    }
+
+    return d3.format(".2s")(y).replace(/T/, " Trillion").replace(/G/, " Billion").replace(/M/, " Million").replace(/k/, " Thousand")
+}
+function UpdateModelSizeVis() {
+    let data = modelSizeData.filter(d => { return (d.date.getYear() + 1900) <= timelineYear })
+    const g = d3.select("#vis1").select("svg").select("g")
+    const xAxis = g.select(".xAxis")
+    const yAxis = g.select(".yAxis")
+
+
+    const x = d3.scaleTime()
+        .domain([new Date(modelSizeStartYear, 0, 1), new Date(timelineYear, 0, 1)])
+        .range([0, width]);
+
+    const y = d3.scaleLog()
+        .domain(d3.extent(modelSizeData, d => d.paramSize))
+        .range([height, 0]);
+
+    const xAxisUpdated = d3.axisBottom(x).tickFormat(d => d3.timeFormat("%Y")(d));
+    const yAxisUpdated = d3.axisLeft(y).tickFormat(GraphYAxisFormat);
+
+    xAxis.transition()
+        .duration(500)
+        .call(xAxisUpdated)
+
+    yAxis.transition()
+        .duration(500)
+        .call(yAxisUpdated)
+
+    g.selectAll(".marker").data(data).join(
+        function (enter) {
+            return enter.append("circle")
+                .on("click", function (event, d) {
+                    if (selectedModels.has(d.Model)) {
+                        selectedModels.delete(d.Model)
+                    } else {
+                        selectedModels.add(d.Model)
+                    }
+                    UpdateModelSizeVis()
+                })
+                .on("mouseover", function (event, d) {
+                    d3.select(this).style("cursor", "pointer")
+                    tooltip.transition().duration(100).style("opacity", .95);
+                    tooltip.html(`<strong><span style="color: ${d.color};"> ${d.Model}</span> (${d.date.getYear() + 1900})</strong>${GraphYAxisFormat(d.Parameters)} parameters`)
+                        .style("left", (event.pageX + 10) + "px")
+                        .style("top", (event.pageY - 28) + "px");
+
+                })
+                .on("mouseout", function () {
+                    d3.select(this).attr("r", 5)
+                    tooltip.transition().duration(300).style("opacity", 0);
+                })
+                .attr("cy", d => y(d.paramSize))
+                .attr("cx", d => x(d.date))
+                .transition()
+                .duration(500)
+                .attr("r", 5)
+                .attr("opacity", d => getOpacity(d.Model, selectedModels, 1))
+                .attr("stroke", "black")
+                .attr("fill", d => d.color)
+                .attr("class", "marker")
+        },
+        function (update) {
+            return update
+                .transition(500)
+                .attr("r", 5)
+                .attr("cy", d => y(d.paramSize))
+                .attr("cx", d => x(d.date))
+                .attr("opacity", d => getOpacity(d.Model, selectedModels, 1))
+
+        },
+        function (exit) {
+            return exit.transition().duration(300).attr("r", 0).remove()
+        }
+    )
+
+    let selectedData = data.filter(d => selectedModels.has(d.Model))
+    g.selectAll(".outline").data(selectedData).join(
+        function (enter) {
+            return enter.append("circle")
+                .attr("cy", d => y(d.paramSize))
+                .attr("cx", d => x(d.date))
+                .transition()
+                .duration(500)
+                .attr("r", 10)
+                .attr("stroke-width", "2")
+                .attr("stroke", d => d.color)
+                .attr("fill", "none")
+                .attr("class", "outline")
+        },
+        function (update) {
+            return update
+                .transition()
+                .duration(250)
+                .attr("cy", d => y(d.paramSize))
+                .attr("cx", d => x(d.date))
+                .attr("stroke-width", "2")
+                .attr("stroke", d => d.color)
+                .attr("r", 10)
+        },
+        function (exit) {
+            return exit.transition().duration(500).attr("r", 0).remove()
+        }
+    )
+
+    g.selectAll(".name").data(selectedData).join(
+        function (enter) {
+            return enter.append("text")
+                .attr("x", d => x(d.date))
+                .attr("y", d => y(d.paramSize))
+                .attr("text-anchor", "end ")
+                .style("font-size", "15px")
+                .style("font-weight", "bold")
+                .style("transform", "translate(-10px, -10px)")
+                .attr("fill", d => d.color)
+                .text(d => d.Model)
+                .attr("class", "name")
+                .style("text-shadow", "1px 1px 1px black")
+        },
+        function (update) {
+            return update
+                .text(d => d.Model)
+                .attr("fill", d => d.color)
+                .transition(500)
+                .attr("x", d => x(d.date))
+                .attr("y", d => y(d.paramSize))
+        },
+        function (exit) {
+            return exit.remove()
+        }
+    )
+}
+
+function InitModelSizeVis(data) {
+
+    const svg = d3.select("#vis1")
+        .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+
+
+    const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+    // Axis labels
+    svg.append("text")
+        .attr("transform", `translate(${margin.left + width / 2},${margin.top + height + 40})`)
+        .style("text-anchor", "middle")
 
     svg.append("text")
-        .attr("x", width / 2)
-        .attr("y", -margin.top / 2)
-        .attr("text-anchor", "middle")
-        .style("font-size", "24px")
-        .text("Model Performance Across Different Tasks in 2025");
+        .attr("transform", "rotate(-90)")
+        .attr("y", margin.left - 60)
+        .attr("x", 0 - (margin.top + height / 2))
+        .style("text-anchor", "middle")
+        .text("Training Parameters Size");
+
+    g.append("g")
+        .attr("transform", `translate(0,${height})`)
+        .attr("class", "xAxis")
+
+    g.append("g")
+        .attr("class", "yAxis")
+
+
+    const legend = svg.append("g").attr("class", "gLegend")
+
+    let offset = 0;
+    for (const modeltype of modelTypes) {
+        const color = modelColors[modeltype]
+        legend.append("circle").attr("cx", width + margin.left + 20).attr("cy", margin.top + offset).attr("r", 5).attr("fill", color)
+        legend.append("text").attr("transform", `translate(${width + margin.left + 40},${margin.top + offset + 5})`).text(modeltype).style("fill", color).style("font-size", "12px")
+        offset += 30
+    }
+
+    UpdateModelSizeVis()
+}
+
+function InitBenchmarkVis() {
+    const svg = d3.select("#vis2").append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+    const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+
+    // Axis labels
+    svg.append("text")
+        .attr("transform", `translate(${margin.left + width / 2},${margin.top + height + 40})`)
+        .style("text-anchor", "middle")
+
+    svg.append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", margin.left - 60)
+        .attr("x", 0 - (margin.top + height / 2))
+        .style("text-anchor", "middle")
+        .text("AI Performance");
+
+    g.append("g")
+        .attr("transform", `translate(0,${height})`)
+        .attr("class", "xAxis")
+
+
+    g.append("g")
+        .attr("class", "yAxis")
+
+
+    g.append("g").attr("class", "gLines")
+
+    const legend = svg.append("g").attr("class", "gLegend")
+    let offset = 0;
+    for (const task of benchmarkTasks) {
+        const color = benchmarkColors[task]
+        legend.append("circle").attr("cx", width + margin.left + 20).attr("cy", margin.top + offset).attr("r", 5).attr("fill", color)
+        legend.append("text").attr("transform", `translate(${width + margin.left + 40},${margin.top + offset + 5})`).text(task).style("fill", color).style("font-size", "12px")
+        offset += 30
+    }
+
+    const lineGenerator = d3.line()
+    svg.append("path").attr("class", "horiz")
+        .attr("d", lineGenerator([[margin.left, height / 4 + margin.top / 4], [width + margin.left, height / 4 + margin.top / 4]]))
+        .attr('stroke', 'grey')
+        .attr('fill', 'none');
+
+    svg.append("text")
+        .attr("transform", `translate(${margin.left + width / 1.7},${height / 4 + margin.top / 5})`)
+        .style("text-anchor", "end")
+        .text("Human Benchmark Performance")
+        .attr("opacity", .5)
+        .attr("font-weight", "bold")
+        .style("font-size", 14)
+
+    UpdateBenchmarkVis()
+}
+
+function UpdateBenchmarkVis() {
+    let benchmarkEndYear = (timelineYear < benchmarkStartYear ? benchmarkStartYear : timelineYear)
+    let data = benchmarkData.filter(d => { return (d.date.getYear() + 1900) <= benchmarkEndYear })
+
+
+    const g = d3.select("#vis2").select("svg").select("g")
+
+
+    const xAxis = g.select(".xAxis")
+    const yAxis = g.select(".yAxis")
+
+    const x = d3.scaleTime()
+        .domain([new Date(benchmarkStartYear, 0, 1), new Date(benchmarkEndYear, 0, 1)])
+        .range([0, width]);
+
+    const y = d3.scaleLinear()
+        .domain([-100, 20])
+        .range([height, 0]);
+
+    const yAxisUpdated = d3.axisLeft(y);
+    const xAxisUpdated = d3.axisBottom(x).tickFormat(d => d3.timeFormat("%Y")(d));
+
+    yAxis.transition()
+        .call(yAxisUpdated)
+
+    xAxis.transition()
+        .call(xAxisUpdated)
+
+
+    g.selectAll("circle").data(data).join(
+        function (enter) {
+            return enter.append("circle")
+                .attr("cy", d => y(d.score))
+                .attr("r", 4)
+                .attr("fill", d => d.color)
+                .attr("cx", d => x(d.date))
+                .on("mouseover", function (event, d) {
+                    if (d) {
+                        d3.select(this).style("cursor", "pointer")
+                        d3.select(this).attr("r", 6)
+                        tooltip.transition().duration(100).style("opacity", .95);
+                        tooltip.html(`<span style="color: ${d.color};">${d.task}</span> <br> ${d.score}`)
+                            .style("left", (event.pageX + 10) + "px")
+                            .style("top", (event.pageY - 28) + "px");
+                    }
+                })
+                .on("mouseout", function () {
+                    d3.select(this).attr("r", 4)
+                    tooltip.transition().duration(300).style("opacity", 0);
+                })
+        },
+        function (update) {
+            return update
+                .attr("cx", d => x(d.date))
+                .attr("cy", d => y(d.score))
+        },
+
+        function (exit) {
+            return exit.remove()
+        }
+
+    )
+
+    const line = d3.line((d) => x(d.date), (d) => y(d.score))
+    g.select(".gLines").selectAll("path").data(benchmarkTasks).join(
+        enter => {
+            return enter.append("path")
+                .attr("d", task => line(data.filter(d => d.task == task)))
+                .attr("fill", "none")
+                .attr("stroke", task => benchmarkColors[task])
+        },
+        update => {
+            return update.attr("d", task => line(data.filter(d => d.task == task)))
+        },
+        exit => {
+            return exit.remove()
+        }
+    )
+
+}
+
+
+
+function UpdateComputeVis() {
+    let computeEndYear = (timelineYear < computeStartYear ? computeStartYear : timelineYear)
+    let data = computeData.filter(d => { return (d.date.getYear() + 1900) <= computeEndYear })
+
+    const g = d3.select("#vis3").select("svg").select("g")
+
+    const xAxis = g.select(".xAxis")
+    const yAxis = g.select(".yAxis")
+
+    const x = d3.scaleTime()
+        .domain([new Date(computeStartYear, 0, 1), new Date(computeEndYear, 0, 1)])
+        .range([0, width]);
+
+    const y = d3.scaleLog()
+        .domain(d3.extent(computeData, d => d.cost))
+        .range([height, 0]);
+
+
+    const yAxisUpdated = d3.axisLeft(y).tickFormat(GraphYAxisFormat);
+    const xAxisUpdated = d3.axisBottom(x).tickFormat(d3.timeFormat("%Y"));
+
+    yAxis.transition()
+        .call(yAxisUpdated)
+
+    xAxis.transition()
+        .call(xAxisUpdated)
+
+    g.selectAll("circle").data(data).join(
+        function (enter) {
+            return enter.append("circle")
+                .on("click", function (event, d) {
+                    if (selectedComputes.has(d.name)) {
+                        selectedComputes.delete(d.name)
+                    } else {
+                        selectedComputes.add(d.name)
+                    }
+                    UpdateComputeVis()
+                })
+                .on("mouseover", function (event, d) {
+                    if (d) {
+                        d3.select(this).style("cursor", "pointer")
+                        d3.select(this).attr("r", 12)
+                        tooltip.transition().duration(100).style("opacity", .95);
+                        tooltip.html(`<strong>${d.name}</strong>$${GraphYAxisFormat(d.cost)}`)
+                            .style("left", (event.pageX + 10) + "px")
+                            .style("top", (event.pageY - 28) + "px");
+                    }
+                })
+                .on("mouseout", function () {
+                    d3.select(this).attr("r", 10)
+                    tooltip.transition().duration(300).style("opacity", 0);
+                })
+                .attr("cx", d => x(d.date))
+                .attr("cy", d => y(d.cost))
+                .transition()
+                .duration(300)
+                .attr("r", 10)
+                .attr("fill", "#69b3a2")
+                .attr("stroke", "black")
+                .attr("opacity", d => getOpacity(d.name, selectedComputes, .75))
+
+
+        },
+        function (update) {
+            return update
+                .transition().duration(500)
+                .attr("cy", d => y(d.cost))
+                .attr("cx", d => x(d.date))
+                .attr("r", 10)
+                .attr("opacity", d => getOpacity(d.name, selectedComputes, .75))
+        },
+        function (exit) {
+            return exit.transition().duration(300).attr("r", 0).remove()
+        }
+    )
+
+    let selectedData = data.filter(d => selectedComputes.has(d.name))
+    g.selectAll(".name").data(selectedData).join(
+        function (enter) {
+            return enter.append("text")
+                .attr("x", d => x(d.date))
+                .attr("y", d => y(d.cost))
+                .attr("text-anchor", "middle")
+                .style("font-size", "15px")
+                .style("font-weight", "bold")
+                .style("transform", "translate(0, -15px)")
+                .attr("fill", "#69b3a2")
+                .text(d => d.name)
+                .attr("class", "name")
+                .style("text-shadow", "1px 1px 1px black")
+        },
+        function (update) {
+            return update
+                .text(d => d.name)
+                .transition()
+                .duration(500
+                )
+                .attr("y", d => y(d.cost))
+                .attr("x", d => x(d.date))
+        },
+        function (exit) {
+            return exit.remove()
+        }
+    )
+}
+
+
+function InitComputeVis() {
+    const svg = d3.select("#vis3").append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+    const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+
+    // Axis labels
+    svg.append("text")
+        .attr("transform", `translate(${margin.left + width / 2},${margin.top + height + 40})`)
+        .style("text-anchor", "middle")
+
+    svg.append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", margin.left - 60)
+        .attr("x", 0 - (margin.top + height / 2))
+        .style("text-anchor", "middle")
+        .text("Dollars Per GFLOP");
+
+    g.append("g")
+        .attr("transform", `translate(0,${height})`)
+        .attr("class", "xAxis")
+
+
+    g.append("g").attr("class", "yAxis")
+    g.append("g").attr("class", "gLines")
+
+    UpdateComputeVis()
+}
+
+d3.csv("data/dollars_per_compute.csv").then(data => {
+    data.forEach(d => {
+        d.cost = +d.GFLOPCost;
+        d.date = new Date(d.Day)
+        d.name = d.Entity
+    });
+
+    data.sort((a, b) => { return a.date - b.date })
+    computeData = data
+    InitComputeVis()
+})
+
+d3.csv("data/ai_benchmark_progress.csv").then(data => {
+    const parsedData = []
+
+    data.forEach(d => {
+        const date = new Date(d.Year, 0, 1);
+        benchmarkTasks.forEach(task => {
+            const score = parseInt(d[task]);
+            if (!isNaN(score)) {
+                parsedData.push({ date, task, score, color: benchmarkColors[task] });
+            }
+        });
+    });
+
+    parsedData.sort((a, b) => { return a.date - b.date })
+    benchmarkData = parsedData
+    InitBenchmarkVis()
+})
+
+d3.csv("data/notable_ai_models.csv").then(data => {
+
+    data.forEach(d => {
+        let domains = d.Domain.split(",")
+        if (domains.len > 1) {
+            d.color = modelColors["Multiple domains"]
+        } else {
+            const domain = domains[0];
+            d.color = domain in modelColors ? modelColors[domain] : modelColors["Other"]
+        }
+        d.date = new Date(d["Publication date"]);
+        d.paramSize = +d.Parameters;
+        d.computeSize = + d["Training compute (FLOP)"]
+        d.datasetSize = + d["Training dataset size (datapoints)"]
+    });
+    data = data.filter(d => { return d.paramSize > 0 });
+    data.sort((a, b) => { return a.date - b.date })
+    modelSizeData = data;
+    InitModelSizeVis(modelSizeData)
 });
