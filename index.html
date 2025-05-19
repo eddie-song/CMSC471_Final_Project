@@ -13,6 +13,7 @@
 <body style="transform: scale(1);">
     <div class="container">
         <div id="timeline-embed" style="width: 100%; height: 520px; margin-bottom: 40px;"></div>
+        <div id="citation-text" style="width: 100%; max-width: 1200px; margin: 0 auto 40px auto; padding: 15px; background-color: #f8f9fa; border-radius: 5px; font-size: 14px; line-height: 1.4; display: none;"></div>
         <div id="metrics-button" style="display: none; text-align: center; margin: 0 auto 40px auto; max-width: 1200px;">
             <button onclick="showMetricsPopup()" style="padding: 10px 20px; font-size: 16px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">See 2025 metrics?</button>
         </div>
@@ -27,28 +28,31 @@
         <div style="display: flex; flex-direction: column; width: 100%; max-width: 1200px; margin: 0 auto;">
             <div style="margin-bottom: 40px;">
                 <div style="margin-bottom: 20px;">
-                    <h2>AI Training Parameter Size</h2>
-                    <p style="font-size: 14px;"> Parameters are variables within an AI/ML system that are adjusted during
-                        training to define how input data is mapped to the desired output. A common example of parameters is the coefficients in a
-                        linear regression model.
-                    </p>
-                </div>
-                <div id="vis1"></div>
-            </div>
-            <div style="margin-bottom: 40px;">
-                <div style="margin-bottom: 20px;">
                     <h2>U.S. Dollars Per Compute</h2>
                     <p style="font-size: 14px;"> Compute is measured in GFLOP which is 10<sup>9</sup> <a
                             href="https://en.wikipedia.org/wiki/Floating_point_operations_per_second"
                             style="color: gray;">floating-point-operations</a>. The graph below shows the amount of U.S.
                         dollars it takes computers/GPUs - which are the dominant computing hardware for AI systems - across time to do one GFLOP worth of computation.</p>
+                    <p style="font-size: 12px; color: #666; margin-top: 5px;">Source: <a href="https://epoch.ai/data/machine-learning-hardware" style="color: #666;">Epoch AI - Machine Learning Hardware</a></p>
                 </div>
                 <div id="vis3"></div>
             </div>
             <div style="margin-bottom: 40px;">
                 <div style="margin-bottom: 20px;">
+                    <h2>AI Training Parameter Size</h2>
+                    <p style="font-size: 14px;"> Parameters are variables within an AI/ML system that are adjusted during
+                        training to define how input data is mapped to the desired output. A common example of parameters is the coefficients in a
+                        linear regression model.
+                    </p>
+                    <p style="font-size: 12px; color: #666; margin-top: 5px;">Source: <a href="https://epoch.ai/data/notable-ai-models" style="color: #666;">Epoch AI - Notable AI Models</a></p>
+                </div>
+                <div id="vis1"></div>
+            </div>
+            <div style="margin-bottom: 40px;">
+                <div style="margin-bottom: 20px;">
                     <h2>AI Benchmark Performance</h2>
                     <p style="font-size: 14px;"> For each domain, the intial AI performance on the benchmark test is set to -100. Human performance is used as the baseline, set at zero. When AI's performance crosses the baseline, then it scored more points than humans.</p>
+                    <p style="font-size: 12px; color: #666; margin-top: 5px;">Source: <a href="https://ourworldindata.org/grapher/test-scores-ai-capabilities-relative-human-performance" style="color: #666;">Our World in Data - AI Capabilities Relative to Human Performance</a></p>
                 </div>
                 <div id="vis2"></div>
             </div>

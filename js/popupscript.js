@@ -271,6 +271,16 @@ infoContainer.append("div")
     .style("line-height", "1.4")
     .html(scoreDescription);
 
+// Add source citation
+infoContainer.append("div")
+    .style("margin-top", "20px")
+    .style("padding", "12px")
+    .style("background-color", "#f8f9fa")
+    .style("border-radius", "8px")
+    .style("font-size", "13px")
+    .style("line-height", "1.4")
+    .html('<strong style="color: #2c3e50; display: block; margin-bottom: 4px;">Source</strong><a href="https://epoch.ai/data/ai-benchmarking-dashboard" style="color: #666;">Epoch AI - AI Benchmarking Dashboard</a>');
+
 d3.csv("data/benchmarks_runs.csv").then(rawData => {
     const modelData = d3.group(rawData, d => d.model);
     

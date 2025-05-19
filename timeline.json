@@ -117,11 +117,13 @@
       },
       "text": {
         "headline": "Theseus the Maze-solving Mouse",
-        "text": "Theseus, developed by Claude Shannon in 1950, was an electromechanical mouse that represented a groundbreaking achievement in early artificial intelligence. The system utilized a magnetic sensor to detect paths and demonstrated adaptive learning capabilities by remembering and avoiding previously encountered dead ends. This innovative creation showcased one of the first practical implementations of machine learning principles, where the device could improve its performance through experience rather than following predetermined instructions."
+        "text": "Theseus, developed by Claude Shannon in 1950, was an electromechanical mouse that represented a groundbreaking achievement in early artificial intelligence. The system utilized a magnetic sensor to detect paths and demonstrated adaptive learning capabilities by remembering and avoiding previously encountered dead ends. This innovative creation showcased one of the first practical implementations of machine learning principles, where the device could improve its performance through experience rather than following predetermined instructions.",
+        "citation": "Shannon, C. E. (1951). Presentation of a Maze-Solving Machine. In Cybernetics: Circular Causal and Feedback Mechanisms in Biological and Social Systems (pp. 173-180). Josiah Macy Jr. Foundation."
       },
       "media": {
         "url": "https://upload.wikimedia.org/wikipedia/commons/7/70/Theseus_Maze_by_Claude_Shannon%2C_1952_-_MIT_Museum_-_DSC03702.JPG",
-        "caption": "Claude Shannon's Theseus, a foundational experiment in AI."
+        "caption": "Claude Shannon's Theseus, a foundational experiment in AI.",
+        "citation": "Wikimedia Commons, Theseus Maze by Claude Shannon, 1952 - MIT Museum"
       },
       "background": {
         "url": "https://img.freepik.com/free-vector/classic-vintage-rays-sunburst-retro-background_1017-33769.jpg?semt=ais_hybrid&w=740"
@@ -134,11 +136,13 @@
       },
       "text": {
         "headline": "Perceptron Mark I",
-        "text": "Frank Rosenblatt's Perceptron, developed in 1957, revolutionized the field of artificial intelligence by introducing one of the first practical implementations of artificial neural networks. The system was specifically designed for pattern recognition tasks and demonstrated the ability to learn from examples through a process of iterative weight adjustments. This groundbreaking work established fundamental principles that would later form the basis of modern deep learning architectures, showing how machines could adapt and improve their performance through training."
+        "text": "Frank Rosenblatt's Perceptron, developed in 1957, revolutionized the field of artificial intelligence by introducing one of the first practical implementations of artificial neural networks. The system was specifically designed for pattern recognition tasks and demonstrated the ability to learn from examples through a process of iterative weight adjustments. This groundbreaking work established fundamental principles that would later form the basis of modern deep learning architectures, showing how machines could adapt and improve their performance through training.",
+        "citation": "Rosenblatt, F. (1958). The Perceptron: A Probabilistic Model for Information Storage and Organization in the Brain. Psychological Review, 65(6), 386-408."
       },
       "media": {
         "url": "https://news.cornell.edu/sites/default/files/styles/full_size/public/2019-09/0925_rosenblatt5.jpg?itok=7UpHtbRj",
-        "caption": "Frank Rosenblatt adjusting the Perceptron."
+        "caption": "Frank Rosenblatt adjusting the Perceptron.",
+        "citation": "Cornell University News, 2019"
       },
       "background": {
         "url": "https://anatomiesofintelligence.github.io/img/p/perceptron-markI-diagram.png"
@@ -152,11 +156,13 @@
       },
       "text": {
         "headline": "IBM's First Supercomputer",
-        "text": "The IBM 7030 Stretch, introduced in 1961, represented a monumental leap forward in computing capabilities, becoming the world's fastest computer of its time. Despite its initial commercial challenges, the system introduced revolutionary architectural concepts that would become fundamental to modern computing, including instruction pipelining and memory interleaving. The Stretch's advanced design principles and performance optimizations laid the groundwork for future supercomputing architectures, demonstrating IBM's commitment to pushing the boundaries of computational power."
+        "text": "The IBM 7030 Stretch, introduced in 1961, represented a monumental leap forward in computing capabilities, becoming the world's fastest computer of its time. Despite its initial commercial challenges, the system introduced revolutionary architectural concepts that would become fundamental to modern computing, including instruction pipelining and memory interleaving. The Stretch's advanced design principles and performance optimizations laid the groundwork for future supercomputing architectures, demonstrating IBM's commitment to pushing the boundaries of computational power.",
+        "citation": "Buchholz, W. (1962). Planning a Computer System: Project Stretch. McGraw-Hill Book Company."
       },
       "media": {
         "url": "https://www.ibm.com/content/dam/connectedassets-adobe-cms/worldwide-content/arc/cf/ul/g/d4/fc/16834_stretch8.jpg/_jcr_content/renditions/cq5dam.medium.1584.1584.jpeg",
-        "caption": ""
+        "caption": "",
+        "citation": "IBM Archives, IBM 7030 Stretch Supercomputer"
       },
       "background": {
         "url": "https://wallpapercat.com/w/full/3/7/5/2113037-2560x1440-desktop-hd-ibm-background-photo.jpg"
@@ -169,11 +175,13 @@
       },
       "text": {
         "headline": "The First Chatbot: ELIZA",
-        "text": "Developed by Joseph Weizenbaum at MIT in 1966, ELIZA pioneered the field of natural language processing by creating one of the first conversational AI systems. The program's most famous script, DOCTOR, simulated a Rogerian psychotherapist by using pattern matching and scripted responses to engage users in meaningful dialogue. ELIZA's ability to maintain seemingly intelligent conversations with users demonstrated the potential of computers to understand and respond to human language, sparking both excitement and ethical discussions about human-computer interaction."
+        "text": "Developed by Joseph Weizenbaum at MIT in 1966, ELIZA pioneered the field of natural language processing by creating one of the first conversational AI systems. The program's most famous script, DOCTOR, simulated a Rogerian psychotherapist by using pattern matching and scripted responses to engage users in meaningful dialogue. ELIZA's ability to maintain seemingly intelligent conversations with users demonstrated the potential of computers to understand and respond to human language, sparking both excitement and ethical discussions about human-computer interaction.",
+        "citation": "Weizenbaum, J. (1966). ELIZA—A Computer Program For the Study of Natural Language Communication Between Man And Machine. Communications of the ACM, 9(1), 36-45."
       },
       "media": {
         "url": "https://upload.wikimedia.org/wikipedia/commons/7/79/ELIZA_conversation.png",
-        "caption": "ELIZA, a pioneering chatbot demonstrating natural language processing."
+        "caption": "ELIZA, a pioneering chatbot demonstrating natural language processing.",
+        "citation": "Wikimedia Commons, ELIZA conversation example"
       },
       "background": {
         "color": "#232729"
@@ -186,11 +194,13 @@
       },
       "text": {
         "headline": "Neocognitron: Japanese Handwriting Recognition",
-        "text": "The Neocognitron, developed by Kunihiko Fukushima in 1980, represented a significant advancement in neural network architecture for visual pattern recognition. This innovative system introduced a hierarchical structure of processing layers that could effectively recognize complex visual patterns, particularly excelling at handwritten Japanese character recognition. The Neocognitron's architecture established fundamental principles that would later evolve into modern convolutional neural networks, demonstrating the potential of neural networks for complex visual processing tasks."
+        "text": "The Neocognitron, developed by Kunihiko Fukushima in 1980, represented a significant advancement in neural network architecture for visual pattern recognition. This innovative system introduced a hierarchical structure of processing layers that could effectively recognize complex visual patterns, particularly excelling at handwritten Japanese character recognition. The Neocognitron's architecture established fundamental principles that would later evolve into modern convolutional neural networks, demonstrating the potential of neural networks for complex visual processing tasks.",
+        "citation": "Fukushima, K. (1980). Neocognitron: A Self-organizing Neural Network Model for a Mechanism of Pattern Recognition Unaffected by Shift in Position. Biological Cybernetics, 36(4), 193-202."
       },
       "media": {
         "url": "https://miro.medium.com/v2/resize:fit:1400/0*qq8NM5pgElCjVJBK.png",
-        "caption": "Diagram showcasing the architecture of the Neocognitron"
+        "caption": "Diagram showcasing the architecture of the Neocognitron",
+        "citation": "Medium.com, Neocognitron Architecture Diagram"
       }
     },
     {
@@ -201,11 +211,13 @@
       },
       "text": {
         "headline": "Cray X-MP: Breaking the 1 GFLOP Barrier",
-        "text": "The Cray X-MP, introduced in 1982, achieved a historic milestone by becoming the first supercomputer to break the 1 GFLOP/s barrier, performing one billion floating-point operations per second. This groundbreaking achievement represented a quantum leap in computational power, enabling complex scientific simulations and data processing tasks that were previously impossible. The X-MP's innovative design and unprecedented performance capabilities set new standards for supercomputing and demonstrated the rapid pace of technological advancement in the field."
+        "text": "The Cray X-MP, introduced in 1982, achieved a historic milestone by becoming the first supercomputer to break the 1 GFLOP/s barrier, performing one billion floating-point operations per second. This groundbreaking achievement represented a quantum leap in computational power, enabling complex scientific simulations and data processing tasks that were previously impossible. The X-MP's innovative design and unprecedented performance capabilities set new standards for supercomputing and demonstrated the rapid pace of technological advancement in the field.",
+        "citation": "Cray Research Inc. (1983). Cray X-MP Series of Computer Systems. Technical Report."
       },
       "media": {
         "url": "https://images.fineartamerica.com/images-medium-large-5/cray-x-mp48-supercomputer-jerry-masonscience-photo-library.jpg",
-        "caption": "The processor of the Cray X-MP supercomputer, installed at the Atlas Centre of the Rutherford Appleton Laboratory, Oxfordshire, U.K"
+        "caption": "The processor of the Cray X-MP supercomputer, installed at the Atlas Centre of the Rutherford Appleton Laboratory, Oxfordshire, U.K",
+        "citation": "Fine Art America, Cray X-MP48 Supercomputer by Jerry Mason/Science Photo Library"
       }, 
       "background": {
         "color": "black"
@@ -218,11 +230,13 @@
       },
       "text": {
         "headline": "Back Propagation",
-        "text": "The 1986 paper by Rumelhart, Hinton, and Williams revolutionized neural network training by popularizing the backpropagation algorithm. This breakthrough technique enabled efficient training of multi-layer neural networks by calculating gradients that guide the learning process. The algorithm's ability to adjust network weights through error minimization opened new possibilities for complex pattern recognition and learning tasks, establishing a fundamental framework that would underpin modern deep learning systems."
+        "text": "The 1986 paper by Rumelhart, Hinton, and Williams revolutionized neural network training by popularizing the backpropagation algorithm. This breakthrough technique enabled efficient training of multi-layer neural networks by calculating gradients that guide the learning process. The algorithm's ability to adjust network weights through error minimization opened new possibilities for complex pattern recognition and learning tasks, establishing a fundamental framework that would underpin modern deep learning systems.",
+        "citation": "Rumelhart, D. E., Hinton, G. E., & Williams, R. J. (1986). Learning representations by back-propagating errors. Nature, 323(6088), 533-536."
       },
       "media": {
         "url": "https://miro.medium.com/v2/resize:fit:1080/0*d9yJ5xIqdbDyjCYR.gif",
-        "caption": "Animation showcasing the flow of data during backpropagation in a neural network"
+        "caption": "Animation showcasing the flow of data during backpropagation in a neural network",
+        "citation": "Medium.com, Backpropagation Animation"
       },
       "background": {
         "color": "black"
@@ -235,11 +249,13 @@
       },
       "text": {
         "headline": "TD-Gammon",
-        "text": "Developed by IBM researcher Gerald Tesauro in 1992, TD-Gammon achieved expert-level performance in backgammon through an innovative application of reinforcement learning. The system learned to play at a world-class level entirely through self-play, without any prior knowledge of human strategies or game theory. This breakthrough demonstrated the potential of reinforcement learning in complex decision-making tasks, paving the way for future AI systems like AlphaGo and establishing new paradigms for machine learning in games."
+        "text": "Developed by IBM researcher Gerald Tesauro in 1992, TD-Gammon achieved expert-level performance in backgammon through an innovative application of reinforcement learning. The system learned to play at a world-class level entirely through self-play, without any prior knowledge of human strategies or game theory. This breakthrough demonstrated the potential of reinforcement learning in complex decision-making tasks, paving the way for future AI systems like AlphaGo and establishing new paradigms for machine learning in games.",
+        "citation": "Tesauro, G. (1995). Temporal Difference Learning and TD-Gammon. Communications of the ACM, 38(3), 58-68."
       },
       "media": {
         "url": "https://achievements.ai/wp-content/uploads/2021/01/td-gammon-program-developed-by-gerald-tesauro-1.jpg",
-        "caption": "TD-Gammon, one of the first successful uses of reinforcement learning applied to games."
+        "caption": "TD-Gammon, one of the first successful uses of reinforcement learning applied to games.",
+        "citation": "Achievements.ai, TD-Gammon Program by Gerald Tesauro"
       },
       "background": {
         "url": "https://media.istockphoto.com/id/170618222/photo/backgammon-board-background.jpg?s=612x612&w=0&k=20&c=zVquSTv7Ch4UzSJzGrhA09FfNh2hLNIKkq4fQrvZcxo="
@@ -252,11 +268,13 @@
       },
       "text": {
         "headline": "Support Vector Machines",
-        "text": "Introduced in 1995, Support Vector Machines (SVMs) revolutionized machine learning by providing a powerful geometric approach to classification problems. The algorithm's ability to find optimal decision boundaries between classes made it particularly effective for high-dimensional data analysis. SVMs became a cornerstone of machine learning applications, widely adopted in fields ranging from text classification to bioinformatics, before the emergence of deep learning techniques."
+        "text": "Introduced in 1995, Support Vector Machines (SVMs) revolutionized machine learning by providing a powerful geometric approach to classification problems. The algorithm's ability to find optimal decision boundaries between classes made it particularly effective for high-dimensional data analysis. SVMs became a cornerstone of machine learning applications, widely adopted in fields ranging from text classification to bioinformatics, before the emergence of deep learning techniques.",
+        "citation": "Cortes, C., & Vapnik, V. (1995). Support-vector networks. Machine Learning, 20(3), 273-297."
       },
       "media": {
         "url": "https://miro.medium.com/max/333/0*aiT6AJL16jgGmjh_.gif",
-        "caption": "Animation showcasing the Support Vector Machine algorithm"
+        "caption": "Animation showcasing the Support Vector Machine algorithm",
+        "citation": "Medium.com, SVM Algorithm Animation"
       },
       "background": {
         "color": "black"
@@ -270,11 +288,13 @@
       },
       "text": {
         "headline": "NASA's Beowulf Cluster",
-        "text": "NASA's development of the Beowulf cluster in 1994 revolutionized high-performance computing by creating an affordable supercomputing solution using off-the-shelf personal computers. This innovative approach to parallel computing made powerful computational resources accessible to a wider range of researchers and institutions. The Beowulf architecture's success demonstrated that high-performance computing could be achieved without expensive proprietary hardware, influencing the development of modern cloud computing and distributed systems."
+        "text": "NASA's development of the Beowulf cluster in 1994 revolutionized high-performance computing by creating an affordable supercomputing solution using off-the-shelf personal computers. This innovative approach to parallel computing made powerful computational resources accessible to a wider range of researchers and institutions. The Beowulf architecture's success demonstrated that high-performance computing could be achieved without expensive proprietary hardware, influencing the development of modern cloud computing and distributed systems.",
+        "citation": "Becker, D. J., Sterling, T., Savarese, D., Dorband, J. E., Ranawak, U. A., & Packer, C. V. (1995). Beowulf: A parallel workstation for scientific computation. In Proceedings of the 24th International Conference on Parallel Processing (pp. 11-14)."
       },
       "media": {
         "url": "https://www.spacefoundation.org/wp-content/uploads/2022/08/Beowolf2.jpg",
-        "caption": "Beowulf Cluster installment at the NASA Goddard Space Flight Center"
+        "caption": "Beowulf Cluster installment at the NASA Goddard Space Flight Center",
+        "citation": "Space Foundation, NASA Beowulf Cluster Installation"
       },
       "background": {
         "url": "https://i.ytimg.com/vi/p4YdZiTMPUc/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AH-CYAC0AWKAgwIABABGBMgMCh_MA8=&rs=AOn4CLDld2kLIKyvd74GudtuEUaL_wDJxA"
@@ -287,11 +307,13 @@
       },
       "text": {
         "headline": "Deep Blue Defeats Kasparov",
-        "text": "IBM's Deep Blue achieved a historic milestone in 1997 by becoming the first computer to defeat reigning world chess champion Garry Kasparov in a match. The system combined advanced search algorithms with specialized hardware to evaluate millions of positions per second. This victory demonstrated the potential of AI to master complex strategic games and captured global attention, marking a significant moment in the public perception of artificial intelligence capabilities."
+        "text": "IBM's Deep Blue achieved a historic milestone in 1997 by becoming the first computer to defeat reigning world chess champion Garry Kasparov in a match. The system combined advanced search algorithms with specialized hardware to evaluate millions of positions per second. This victory demonstrated the potential of AI to master complex strategic games and captured global attention, marking a significant moment in the public perception of artificial intelligence capabilities.",
+        "citation": "Campbell, M., Hoane, A. J., & Hsu, F. H. (2002). Deep Blue. Artificial Intelligence, 134(1-2), 57-83."
       },
       "media": {
         "url": "https://cdn.theatlantic.com/media/mt/science/kasparov615.jpg",
-        "caption": "Deep Blue's victory marked a milestone in game-playing AI."
+        "caption": "Deep Blue's victory marked a milestone in game-playing AI.",
+        "citation": "The Atlantic, Deep Blue vs Kasparov Match"
       },
       "background": {
         "url": "https://png.pngtree.com/thumb_back/fh260/background/20230610/pngtree-black-and-white-chess-pieces-in-a-hall-image_2918699.jpg"
@@ -304,11 +326,13 @@
       },
       "text": {
         "headline": "LeNet-5",
-        "text": "Developed in 1998, LeNet-5 represented a breakthrough in convolutional neural networks for handwritten digit recognition. The architecture introduced innovative techniques for feature extraction and pattern recognition that would become fundamental to modern computer vision systems. LeNet-5's success in automatically learning hierarchical features from images demonstrated the potential of deep learning for visual recognition tasks, influencing the development of subsequent neural network architectures."
+        "text": "Developed in 1998, LeNet-5 represented a breakthrough in convolutional neural networks for handwritten digit recognition. The architecture introduced innovative techniques for feature extraction and pattern recognition that would become fundamental to modern computer vision systems. LeNet-5's success in automatically learning hierarchical features from images demonstrated the potential of deep learning for visual recognition tasks, influencing the development of subsequent neural network architectures.",
+        "citation": "LeCun, Y., Bottou, L., Bengio, Y., & Haffner, P. (1998). Gradient-based learning applied to document recognition. Proceedings of the IEEE, 86(11), 2278-2324."
       },
       "media": {
         "url": "https://vitalab.github.io/article/images/lenet/a384.gif",
-        "caption": "A LeNet-5 Demo on a batch of handwritten digits"
+        "caption": "A LeNet-5 Demo on a batch of handwritten digits",
+        "citation": "Vitalab, LeNet-5 Demo Animation"
       },
       "background": {
         "color": "#399ABB"
@@ -321,7 +345,8 @@
       },
       "text": {
         "headline": "Hiero: UMD's Machine Translation System",
-        "text": "Developed by University of Maryland researchers in 2005, Hiero introduced a novel approach to statistical machine translation through hierarchical phrase-based models. The system's ability to capture the hierarchical structure of language significantly improved translation accuracy compared to previous methods. This innovation demonstrated how understanding linguistic hierarchies could enhance machine translation quality, contributing to the evolution of natural language processing techniques."
+        "text": "Developed by University of Maryland researchers in 2005, Hiero introduced a novel approach to statistical machine translation through hierarchical phrase-based models. The system's ability to capture the hierarchical structure of language significantly improved translation accuracy compared to previous methods. This innovation demonstrated how understanding linguistic hierarchies could enhance machine translation quality, contributing to the evolution of natural language processing techniques.",
+        "citation": "Chiang, D. (2005). A hierarchical phrase-based model for statistical machine translation. In Proceedings of the 43rd Annual Meeting of the Association for Computational Linguistics (pp. 263-270)."
       },
       "background": {
         "url": "https://wallpapers.com/images/hd/university-of-maryland-terrapin-shell-nefppid5p07m9nl3.jpg"
@@ -335,11 +360,13 @@
       },
       "text": {
         "headline": "NVIDIA and CUDA: The GPU Computing Revolution",
-        "text": "NVIDIA's release of CUDA in 2008 marked a transformative moment in parallel computing by enabling general-purpose processing on graphics processing units. The accompanying GeForce GTX 280 GPU delivered unprecedented computational power for scientific and AI applications. This breakthrough made GPU-accelerated computing accessible to researchers and developers, fundamentally changing how complex computations were performed and accelerating the development of deep learning systems."
+        "text": "NVIDIA's release of CUDA in 2008 marked a transformative moment in parallel computing by enabling general-purpose processing on graphics processing units. The accompanying GeForce GTX 280 GPU delivered unprecedented computational power for scientific and AI applications. This breakthrough made GPU-accelerated computing accessible to researchers and developers, fundamentally changing how complex computations were performed and accelerating the development of deep learning systems.",
+        "citation": "NVIDIA Corporation. (2008). NVIDIA CUDA Programming Guide. Version 1.1."
       },
       "media": {
         "url": "https://tpucdn.com/gpu-specs/images/b/2251-front.small.jpg",
-        "caption": "The NVIDIA GeForce GTX 280, a large improvement in compute cost"
+        "caption": "The NVIDIA GeForce GTX 280, a large improvement in compute cost",
+        "citation": "TPU Database, NVIDIA GeForce GTX 280 GPU"
       },
       "background": {
         "url": "https://wallpapercat.com/w/full/9/7/c/1255566-3840x2160-desktop-4k-nvidia-background-photo.jpg"
@@ -352,11 +379,13 @@
       },
       "text": {
         "headline": "AlexNet Wins ImageNet",
-        "text": "AlexNet's victory in the 2012 ImageNet competition marked a pivotal moment in the field of computer vision and deep learning. The model's success was largely attributed to its innovative architecture and the use of parallel NVIDIA GPUs for training. This breakthrough demonstrated the superior performance of deep convolutional neural networks in image recognition tasks, sparking a renewed interest in neural networks and accelerating the deep learning revolution."
+        "text": "AlexNet's victory in the 2012 ImageNet competition marked a pivotal moment in the field of computer vision and deep learning. The model's success was largely attributed to its innovative architecture and the use of parallel NVIDIA GPUs for training. This breakthrough demonstrated the superior performance of deep convolutional neural networks in image recognition tasks, sparking a renewed interest in neural networks and accelerating the deep learning revolution.",
+        "citation": "Krizhevsky, A., Sutskever, I., & Hinton, G. E. (2012). ImageNet classification with deep convolutional neural networks. In Advances in Neural Information Processing Systems (pp. 1097-1105)."
       },
       "media": {
         "url": "https://miro.medium.com/v2/resize:fit:1400/0*xFY-719luaVR1wjY.png",
-        "caption": "AlexNet's success popularized deep learning techniques."
+        "caption": "AlexNet's success popularized deep learning techniques.",
+        "citation": "Medium.com, AlexNet Architecture Diagram"
       }
     },
     {
@@ -366,11 +395,13 @@
       },
       "text": {
         "headline": "AlphaGo Defeats Lee Sedol",
-        "text": "DeepMind's AlphaGo achieved a historic milestone in 2016 by defeating world Go champion Lee Sedol in a five-game match. The system combined deep neural networks with reinforcement learning to master the complex game of Go. This victory demonstrated the potential of AI to tackle problems requiring intuition and strategic thinking, marking a significant advancement in artificial intelligence capabilities."
+        "text": "DeepMind's AlphaGo achieved a historic milestone in 2016 by defeating world Go champion Lee Sedol in a five-game match. The system combined deep neural networks with reinforcement learning to master the complex game of Go. This victory demonstrated the potential of AI to tackle problems requiring intuition and strategic thinking, marking a significant advancement in artificial intelligence capabilities.",
+        "citation": "Silver, D., Huang, A., Maddison, C. J., Guez, A., Sifre, L., van den Driessche, G., ... & Hassabis, D. (2016). Mastering the game of Go with deep neural networks and tree search. Nature, 529(7587), 484-489."
       },
       "media": {
         "url": "https://i.redd.it/zmwmm6lx05cb1.jpg",
-        "caption": "AlphaGo marked a significant advance in AI game playing."
+        "caption": "AlphaGo marked a significant advance in AI game playing.",
+        "citation": "Reddit, AlphaGo vs Lee Sedol Match"
       }
     },
     {
@@ -381,11 +412,13 @@
       },
       "text": {
         "headline": "NVIDIA Tesla V100 & Tensor Cores",
-        "text": "The 2017 introduction of NVIDIA's Tesla V100 GPU with Tensor Cores revolutionized AI computing by delivering unprecedented performance for deep learning tasks. The specialized Tensor Cores enabled efficient matrix multiplication operations crucial for neural network training and inference. This breakthrough hardware architecture achieved over 100 teraflops of deep learning performance, becoming a cornerstone of modern AI infrastructure in data centers and research institutions."
+        "text": "The 2017 introduction of NVIDIA's Tesla V100 GPU with Tensor Cores revolutionized AI computing by delivering unprecedented performance for deep learning tasks. The specialized Tensor Cores enabled efficient matrix multiplication operations crucial for neural network training and inference. This breakthrough hardware architecture achieved over 100 teraflops of deep learning performance, becoming a cornerstone of modern AI infrastructure in data centers and research institutions.",
+        "citation": "NVIDIA Corporation. (2017). NVIDIA Tesla V100 GPU Architecture. White Paper."
       },
       "media": {
         "url": "https://images.contentstack.io/v3/assets/blt71da4c740e00faaa/blt20563cbe49c355d2/5eea631c5f3aa42c4669df22/V100-Specs.jpg",
-        "caption": ""
+        "caption": "",
+        "citation": "NVIDIA Content Stack, Tesla V100 GPU Specifications"
       },
       "background": {
         "color": "black"
@@ -398,11 +431,13 @@
       },
       "text": {
         "headline": "BERT: Breakthrough in NLP",
-        "text": "Google's BERT model, released in 2018, transformed natural language processing by introducing a bidirectional approach to understanding language context. The model's ability to capture contextual relationships between words significantly improved performance on various NLP tasks. BERT's success established new benchmarks in language understanding and influenced the development of subsequent transformer-based models, marking a fundamental shift in how machines process and understand human language."
+        "text": "Google's BERT model, released in 2018, transformed natural language processing by introducing a bidirectional approach to understanding language context. The model's ability to capture contextual relationships between words significantly improved performance on various NLP tasks. BERT's success established new benchmarks in language understanding and influenced the development of subsequent transformer-based models, marking a fundamental shift in how machines process and understand human language.",
+        "citation": "Devlin, J., Chang, M. W., Lee, K., & Toutanova, K. (2018). BERT: Pre-training of deep bidirectional transformers for language understanding. arXiv preprint arXiv:1810.04805."
       },
       "media": {
         "url": "https://miro.medium.com/v2/resize:fit:1200/0*ZenLUXS5ubzvc9lB.png",
-        "caption": "BERT demonstrated the potential of transformer models in NLP."
+        "caption": "BERT demonstrated the potential of transformer models in NLP.",
+        "citation": "Medium.com, BERT Model Architecture"
       }
     },
     {
@@ -412,11 +447,13 @@
       },
       "text": {
         "headline": "GPT-2 Released",
-        "text": "OpenAI's release of GPT-2 in 2019 demonstrated unprecedented capabilities in natural language generation with its 1.5 billion parameters. The model's ability to generate coherent and contextually relevant text across various domains showcased the potential of large language models. GPT-2's success highlighted both the promise and challenges of advanced language models, sparking important discussions about AI safety and responsible deployment."
+        "text": "OpenAI's release of GPT-2 in 2019 demonstrated unprecedented capabilities in natural language generation with its 1.5 billion parameters. The model's ability to generate coherent and contextually relevant text across various domains showcased the potential of large language models. GPT-2's success highlighted both the promise and challenges of advanced language models, sparking important discussions about AI safety and responsible deployment.",
+        "citation": "Radford, A., Wu, J., Child, R., Luan, D., Amodei, D., & Sutskever, I. (2019). Language models are unsupervised multitask learners. OpenAI Blog, 1(8), 9."
       },
       "media": {
         "url": "https://miro.medium.com/v2/resize:fit:2800/1*pitt26-yeiJlxaWS4G2-_w.jpeg",
-        "caption": "GPT-2 significantly advanced natural language generation."
+        "caption": "GPT-2 significantly advanced natural language generation.",
+        "citation": "Medium.com, GPT-2 Model Architecture"
       }
     },
     {
@@ -426,11 +463,13 @@
       },
       "text": {
         "headline": "AlphaFold Solves Protein Folding",
-        "text": "DeepMind's AlphaFold, released in 2020, achieved a breakthrough in structural biology by accurately predicting protein structures from amino acid sequences. The system's predictions matched experimental results with remarkable precision, solving a problem that had challenged scientists for decades. This advancement has significant implications for drug discovery and understanding biological processes, demonstrating AI's potential to accelerate scientific research."
+        "text": "DeepMind's AlphaFold, released in 2020, achieved a breakthrough in structural biology by accurately predicting protein structures from amino acid sequences. The system's predictions matched experimental results with remarkable precision, solving a problem that had challenged scientists for decades. This advancement has significant implications for drug discovery and understanding biological processes, demonstrating AI's potential to accelerate scientific research.",
+        "citation": "Jumper, J., Evans, R., Pritzel, A., Green, T., Figurnov, M., Ronneberger, O., ... & Hassabis, D. (2021). Highly accurate protein structure prediction with AlphaFold. Nature, 596(7873), 583-589."
       },
       "media": {
         "url": "https://cen.acs.org/content/dam/cen/99/28/WEB/09928-leadcon-protein.jpg",
-        "caption": "AlphaFold's breakthrough in structural biology."
+        "caption": "AlphaFold's breakthrough in structural biology.",
+        "citation": "Chemical & Engineering News, AlphaFold Protein Structure Prediction"
       }
     },
     {
@@ -440,11 +479,13 @@
       },
       "text": {
         "headline": "GPT-4 Released",
-        "text": "OpenAI's GPT-4, released in 2023, represents a significant advancement in large language model capabilities, demonstrating improved reasoning and problem-solving abilities. The model shows enhanced performance across a wide range of tasks, from creative writing to complex analysis. GPT-4's capabilities have expanded the possibilities of human-AI collaboration while raising important questions about the future of artificial intelligence development and deployment."
+        "text": "OpenAI's GPT-4, released in 2023, represents a significant advancement in large language model capabilities, demonstrating improved reasoning and problem-solving abilities. The model shows enhanced performance across a wide range of tasks, from creative writing to complex analysis. GPT-4's capabilities have expanded the possibilities of human-AI collaboration while raising important questions about the future of artificial intelligence development and deployment.",
+        "citation": "OpenAI. (2023). GPT-4 Technical Report. arXiv preprint arXiv:2303.08774."
       },
       "media": {
         "url": "https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg",
-        "caption": "GPT-4, a leading LLM for natural language tasks."
+        "caption": "GPT-4, a leading LLM for natural language tasks.",
+        "citation": "Wikimedia Commons, ChatGPT Logo"
       }
     }
   ]
