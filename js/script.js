@@ -69,7 +69,7 @@ timeline.on("change", (d) => {
         UpdateComputeVis()
 
         if (event?.text?.headline === "GPT-4 Released") {
-            document.getElementById('metrics-button').style.opacity = 'block';
+            document.getElementById('metrics-button').style.display = 'block';
         } else {
             document.getElementById('metrics-button').style.display = 'none';
         }
@@ -77,9 +77,9 @@ timeline.on("change", (d) => {
         const citationElement = document.getElementById('citation-text');
         if (citationElement && event?.text?.citation) {
             citationElement.innerHTML = `<em>${event.text.citation}</em>`;
-            citationElement.style.opacity = 1;
+            citationElement.style.display = 'block';
         } else if (citationElement) {
-            citationElement.style.opacity = 0;
+            citationElement.style.display = 'none';
         }
     }
 })
