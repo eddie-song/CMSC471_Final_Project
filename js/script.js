@@ -1,8 +1,18 @@
 const margin = { top: 50, right: 200, bottom: 100, left: 80 };
-const width = 680 - margin.left - margin.right;
+const width = 1200 - margin.left - margin.right;
 const height = 600 - margin.top - margin.bottom;
 const tooltip = d3.select("#tooltip");
 
+// Make functions globally accessible
+window.showMetricsPopup = function() {
+    document.getElementById('metrics-popup').style.display = 'block';
+    document.getElementById('overlay').style.display = 'block';
+}
+
+window.closeMetricsPopup = function() {
+    document.getElementById('metrics-popup').style.display = 'none';
+    document.getElementById('overlay').style.display = 'none';
+}
 
 let computeData = []
 let modelSizeData = []
@@ -59,9 +69,14 @@ timeline.on("change", (d) => {
         UpdateBenchmarkVis()
         UpdateComputeVis()
 
+        // Show metrics button when reaching GPT-4
+        if (event?.text?.headline === "GPT-4 Released") {
+            document.getElementById('metrics-button').style.display = 'block';
+        } else {
+            document.getElementById('metrics-button').style.display = 'none';
+        }
     }
 })
-
 
 function getOpacity(name, selected, defaultOpacity) {
 
