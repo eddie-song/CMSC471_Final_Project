@@ -27,8 +27,8 @@ This interactive visualization presents a comprehensive view of AI evolution thr
 
 ## Visualization Instructions
 
-    - Simply run Live Server on index.html
+   - Simply run Live Server on index.html
 
 ## Work Distribution
 
-    - For this project, each team member contributed an even amount to each part of the project. For the proposal, we generated ideas for visualizations and datasets to use together. During meetings in class, we all helped to present our own project's proposal and progress and review other groups' proposals and milestones. When developing the visualization, we each worked on separate parts of the projects and then combined them into a singular file. Once combined, we each made changes to the project as we saw fit.
+   - For this project, each team member contributed an even amount to each part of the project. For the proposal, we generated ideas for visualizations and datasets to use together. During meetings in class, we all helped to present our own project's proposal and progress and review other groups' proposals and milestones. When developing the visualization, we each worked on separate parts of the projects and then combined them into a singular file. Once combined, we each made changes to the project as we saw fit.
