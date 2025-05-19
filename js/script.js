@@ -77,9 +77,9 @@ timeline.on("change", (d) => {
         const citationElement = document.getElementById('citation-text');
         if (citationElement && event?.text?.citation) {
             citationElement.innerHTML = `<em>${event.text.citation}</em>`;
-            citationElement.style.opacity = '1';
+            citationElement.style.opacity = 1;
         } else if (citationElement) {
-            citationElement.style.opacity = '0';
+            citationElement.style.opacity = 0;
         }
     }
 })
