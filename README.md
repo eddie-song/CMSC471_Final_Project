@@ -32,3 +32,10 @@ This interactive visualization presents a comprehensive view of AI evolution thr
 ## Work Distribution
 
    - For this project, each team member contributed an even amount to each part of the project. For the proposal, we generated ideas for visualizations and datasets to use together. During meetings in class, we all helped to present our own project's proposal and progress and review other groups' proposals and milestones. When developing the visualization, we each worked on separate parts of the projects and then combined them into a singular file. Once combined, we each made changes to the project as we saw fit.
+
+## Sources
+
+- AI Benchmark Data: [Our World in Data - AI Capabilities Relative to Human Performance](https://ourworldindata.org/grapher/test-scores-ai-capabilities-relative-human-performance)
+- AI Compute per Dollar: [Epoch AI - Machine Learning Hardware](https://epoch.ai/data/machine-learning-hardware)
+- Notable AI Models: [Epoch AI - Notable AI Models](https://epoch.ai/data/notable-ai-models)
+- 2025 Benchmarks: [Epoch AI - AI Benchmarking Dashboard](https://epoch.ai/data/ai-benchmarking-dashboard)
