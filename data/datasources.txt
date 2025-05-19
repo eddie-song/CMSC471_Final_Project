@@ -1,3 +1,4 @@
 ai_benchmark data from https://ourworldindata.org/grapher/test-scores-ai-capabilities-relative-human-performance
 ai_compute_per_dollar from https://epoch.ai/data/machine-learning-hardware
 notable_ai_models from https://epoch.ai/data/notable-ai-models
+2025_benchmarks from https://epoch.ai/data/ai-benchmarking-dashboard

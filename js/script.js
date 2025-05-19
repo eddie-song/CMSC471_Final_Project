@@ -3,7 +3,6 @@ const width = 1200 - margin.left - margin.right;
 const height = 600 - margin.top - margin.bottom;
 const tooltip = d3.select("#tooltip");
 
-// Make functions globally accessible
 window.showMetricsPopup = function() {
     document.getElementById('metrics-popup').style.display = 'block';
     document.getElementById('overlay').style.display = 'block';
@@ -69,11 +68,18 @@ timeline.on("change", (d) => {
         UpdateBenchmarkVis()
         UpdateComputeVis()
 
-        // Show metrics button when reaching GPT-4
         if (event?.text?.headline === "GPT-4 Released") {
             document.getElementById('metrics-button').style.display = 'block';
         } else {
             document.getElementById('metrics-button').style.display = 'none';
+        }
+
+        const citationElement = document.getElementById('citation-text');
+        if (citationElement && event?.text?.citation) {
+            citationElement.innerHTML = `<em>${event.text.citation}</em>`;
+            citationElement.style.display = 'block';
+        } else if (citationElement) {
+            citationElement.style.display = 'none';
         }
     }
 })
@@ -241,7 +247,6 @@ function InitModelSizeVis(data) {
 
     const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
 
-    // Axis labels
     svg.append("text")
         .attr("transform", `translate(${margin.left + width / 2},${margin.top + height + 40})`)
         .style("text-anchor", "middle")
@@ -280,8 +285,6 @@ function InitBenchmarkVis() {
         .attr("height", height + margin.top + margin.bottom)
     const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
 
-
-    // Axis labels
     svg.append("text")
         .attr("transform", `translate(${margin.left + width / 2},${margin.top + height + 40})`)
         .style("text-anchor", "middle")
@@ -526,8 +529,6 @@ function InitComputeVis() {
         .attr("height", height + margin.top + margin.bottom)
     const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
 
-
-    // Axis labels
     svg.append("text")
         .attr("transform", `translate(${margin.left + width / 2},${margin.top + height + 40})`)
         .style("text-anchor", "middle")
